@@ -1,0 +1,98 @@
+18:11:08 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250618_GPIO_BareMetal/Src/driver/GPIO" -I"C:/cubespace/250618_GPIO_BareMetal/Src/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:25: warning: "PERIPH_BASE" redefined
+   25 | #define PERIPH_BASE (0x40000000UL)
+      | 
+In file included from ../Src/main.c:20:
+../Inc/stm32f411xe.h:641: note: this is the location of the previous definition
+  641 | #define PERIPH_BASE           0x40000000UL /*!< Peripheral base address in the alias region                                */
+      | 
+../Src/main.c:30: warning: "APB1PERIPH_BASE" redefined
+   30 | #define APB1PERIPH_BASE (PERIPH_BASE + APB1PERIPH_OFFSET)
+      | 
+../Inc/stm32f411xe.h:654: note: this is the location of the previous definition
+  654 | #define APB1PERIPH_BASE       PERIPH_BASE
+      | 
+../Src/main.c:32: warning: "AHB1PERIPH_BASE" redefined
+   32 | #define AHB1PERIPH_BASE (PERIPH_BASE + AHB1PERIPH_OFFSET)
+      | 
+../Inc/stm32f411xe.h:656: note: this is the location of the previous definition
+  656 | #define AHB1PERIPH_BASE       (PERIPH_BASE + 0x00020000UL)
+      | 
+../Src/main.c:40: warning: "GPIOA_BASE" redefined
+   40 | #define GPIOA_BASE (AHB1PERIPH_BASE + GPIOA_OFFSET)
+      | 
+../Inc/stm32f411xe.h:696: note: this is the location of the previous definition
+  696 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+      | 
+../Src/main.c:41: warning: "GPIOB_BASE" redefined
+   41 | #define GPIOB_BASE (AHB1PERIPH_BASE + GPIOB_OFFSET)
+      | 
+../Inc/stm32f411xe.h:697: note: this is the location of the previous definition
+  697 | #define GPIOB_BASE            (AHB1PERIPH_BASE + 0x0400UL)
+      | 
+../Src/main.c:42: warning: "GPIOC_BASE" redefined
+   42 | #define GPIOC_BASE (AHB1PERIPH_BASE + GPIOC_OFFSET)
+      | 
+../Inc/stm32f411xe.h:698: note: this is the location of the previous definition
+  698 | #define GPIOC_BASE            (AHB1PERIPH_BASE + 0x0800UL)
+      | 
+../Src/main.c:43: warning: "GPIOD_BASE" redefined
+   43 | #define GPIOD_BASE (AHB1PERIPH_BASE + GPIOD_OFFSET)
+      | 
+../Inc/stm32f411xe.h:699: note: this is the location of the previous definition
+  699 | #define GPIOD_BASE            (AHB1PERIPH_BASE + 0x0C00UL)
+      | 
+../Src/main.c:44: warning: "RCC_BASE" redefined
+   44 | #define RCC_BASE   (AHB1PERIPH_BASE + RCC_OFFSET)
+      | 
+../Inc/stm32f411xe.h:703: note: this is the location of the previous definition
+  703 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x3800UL)
+      | 
+../Src/main.c:95: warning: "GPIOA" redefined
+   95 | #define GPIOA  ((GPIO_TypeDef *)(GPIOA_BASE))
+      | 
+../Inc/stm32f411xe.h:785: note: this is the location of the previous definition
+  785 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      | 
+../Src/main.c:96: warning: "GPIOB" redefined
+   96 | #define GPIOB  ((GPIO_TypeDef *)(GPIOB_BASE))
+      | 
+../Inc/stm32f411xe.h:786: note: this is the location of the previous definition
+  786 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      | 
+../Src/main.c:97: warning: "GPIOC" redefined
+   97 | #define GPIOC  ((GPIO_TypeDef *)(GPIOC_BASE))
+      | 
+../Inc/stm32f411xe.h:787: note: this is the location of the previous definition
+  787 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      | 
+../Src/main.c:100: warning: "RCC" redefined
+  100 | #define RCC    ((RCC_TypeDef *)(RCC_BASE))
+      | 
+../Inc/stm32f411xe.h:792: note: this is the location of the previous definition
+  792 | #define RCC                 ((RCC_TypeDef *) RCC_BASE)
+      | 
+../Src/main.c: In function 'main':
+../Src/main.c:110:13: warning: unused variable 'on' [-Wunused-variable]
+  110 |         int on  = 0;
+      |             ^~
+arm-none-eabi-gcc -o "250618_GPIO_BareMetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250618_GPIO_BareMetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250618_GPIO_BareMetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250618_GPIO_BareMetal.elf
+ 
+arm-none-eabi-size  250618_GPIO_BareMetal.elf 
+arm-none-eabi-objdump -h -S 250618_GPIO_BareMetal.elf  > "250618_GPIO_BareMetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1264	     64	   1568	   2896	    b50	250618_GPIO_BareMetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250618_GPIO_BareMetal.list
+ 
+18:11:11 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
+make -j16 all 
+arm-none-eabi-size  250618_GPIO_BareMetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	     64	   1568	   2896	    b50	250618_GPIO_BareMetal.elf
+Finished building: default.size.stdout
+ 

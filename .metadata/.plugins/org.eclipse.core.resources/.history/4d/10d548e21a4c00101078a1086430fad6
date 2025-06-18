@@ -1,0 +1,6 @@
+#include "Button.h"
+
+uint32_t Button_press(GPIO_TypeDef *GPIOx)
+{
+	   return !((GPIOC->IDR & (1U<<13)) == 0);
+}

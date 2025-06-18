@@ -1,0 +1,6 @@
+1750211942305	Delete resource '250618_GPIO_BareMetal'
+1750212154603	Delete resource '250618_GPIO_BareMetal1'
+1750218723662	Delete resource '250618_GPIO_BareMetal/Inc/stm32f4xx.h'
+1750218726903	Delete resource '250618_GPIO_BareMetal/Inc/system_stm32f4xx.h'
+1750223188355	Delete resource '250618_GPIO_BareMetal/driver'
+1750234123814	Delete resource '250618_GPIO_BareMetal/Src/driver/Button'
