@@ -1,0 +1,37 @@
+#include "ap_main.h"
+
+int ap_main()
+{
+	uint8_t data = 1;
+	int button1_state = 0;
+	int button2_state = 0;
+	int button3_state = 0;
+
+	while(1)
+	{
+		if(Button_GetState(GPIOB,5) == ACT_RELEASED){ //
+			button1_state ^= 1;
+			data = (data << 1) | (data >> 7);
+		}
+		else if(Button_GetState(GPIOB,3) == ACT_RELEASED){
+			button2_state ^= 1;
+			data = (data << 1) | (data >> 7);
+		}
+		else if(Button_GetState(GPIOA,10) == ACT_RELEASED){
+			button1_state ^= 1;
+			data = 0;
+		}
+
+		LEDBar_Write(data);
+    	delay(100);
+	}
+	return 0;
+}
+
+void ap_Init()
+{
+	SystemClock_Init();
+	LedBar_Init();
+	Button_Init();
+}
+

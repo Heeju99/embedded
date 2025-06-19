@@ -2,25 +2,28 @@
 
 enum {PUSHED = 0, RELEASED};
 
-int Button_Init()
+void Button_Init(Button_Handler_t *hbtn, GPIO_TypeDef *GPIOx, uint32_t pinNum)
 {
-	GPIO_init(GPIOC,13,INPUT);
+	hbtn->GPIOx = GPIOx;
+	hbtn->pinNum = pinNum;
+	hbtn->prevState = RELEASED;
+
+	GPIO_init(hbtn->GPIOx, hbtn->pinNum, INPUT);
 }
 
-button_state_t Button_GetState()
+button_state_t Button_GetState(Button_Handler_t *hbtn)
 {
-	static uint32_t prevState = RELEASED;
 	uint32_t curState;
-	curState = GPIO_ReadPin(GPIOC, 13); //pushed = 0
+	curState = GPIO_ReadPin(hbtn->GPIOx, hbtn->pinNum); //pushed = 0
 
-	if(prevState == RELEASED && (curState == PUSHED)){ //1st button pushed
+	if(hbtn->prevState == RELEASED && (curState == PUSHED)){ //1st button pushed
 		delay(2);  //debounce
-		prevState = PUSHED; //state Update
+		hbtn->prevState = PUSHED; //state Update
 		return ACT_PUSHED;
 	}
-	else if (prevState == PUSHED && (curState == RELEASED)){ //1st button pushed
+	else if (hbtn->prevState == PUSHED && (curState == RELEASED)){ //1st button pushed
 		delay(2); //debounce
-		prevState = RELEASED; //state Update
+		hbtn->prevState = RELEASED; //state Update
 		return ACT_RELEASED;
 	}
 
