@@ -1,5 +1,6 @@
 "./Src/ap/ap_main.o"
 "./Src/driver/Button/Button.o"
+"./Src/driver/FND/FND.o"
 "./Src/driver/GPIO/GPIO.o"
 "./Src/driver/LedBar/LedBar.o"
 "./Src/driver/SystemClock/SystemClock.o"

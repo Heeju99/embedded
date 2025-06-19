@@ -1,25 +1,21 @@
-14:56:48 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+16:34:56 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250619_LED_Button1/Src/driver/GPIO" -I"C:/cubespace/250619_LED_Button1/Src/driver/LedBar" -I"C:/cubespace/250619_LED_Button1/Src/driver/SystemClock" -I"C:/cubespace/250619_LED_Button1/Src/ap" -I"C:/cubespace/250619_LED_Button1/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-../Src/ap/ap_main.c: In function 'ap_main':
-../Src/ap/ap_main.c:17:33: warning: unused variable 'data' [-Wunused-variable]
-   17 |                         uint8_t data = 0;
-      |                                 ^~~~
+arm-none-eabi-gcc "../Src/driver/FND/FND.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250619_LED_Button1/Src/driver/GPIO" -I"C:/cubespace/250619_LED_Button1/Src/driver/LedBar" -I"C:/cubespace/250619_LED_Button1/Src/driver/SystemClock" -I"C:/cubespace/250619_LED_Button1/Src/ap" -I"C:/cubespace/250619_LED_Button1/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/FND/FND.d" -MT"Src/driver/FND/FND.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/FND/FND.o"
 arm-none-eabi-gcc -o "250619_LED_Button1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250619_LED_Button1\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250619_LED_Button1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 250619_LED_Button1.elf
  
 arm-none-eabi-size  250619_LED_Button1.elf 
 arm-none-eabi-objdump -h -S 250619_LED_Button1.elf  > "250619_LED_Button1.list"
    text	   data	    bss	    dec	    hex	filename
-   1716	     64	   1616	   3396	    d44	250619_LED_Button1.elf
+   1744	     64	   1600	   3408	    d50	250619_LED_Button1.elf
 Finished building: default.size.stdout
  
 Finished building: 250619_LED_Button1.list
  
-14:56:52 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+16:34:59 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
 make -j16 all 
 arm-none-eabi-size  250619_LED_Button1.elf 
    text	   data	    bss	    dec	    hex	filename
-   1716	     64	   1616	   3396	    d44	250619_LED_Button1.elf
+   1744	     64	   1600	   3408	    d50	250619_LED_Button1.elf
 Finished building: default.size.stdout
  

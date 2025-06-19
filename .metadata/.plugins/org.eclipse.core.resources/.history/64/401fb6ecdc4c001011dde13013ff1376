@@ -1,0 +1,40 @@
+#include "FND.h"
+
+typedef struct{
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+	uint32_t prevState;
+}FND_Handler_t;
+
+void FND_COM ()
+{
+	0 = GPIO_WritePin(GPIOA,11,OUTPUT) && GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT),  GPIO_WritePin(GPIOB,1,OUTPUT),  ;//abcdfe
+	1 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//bc
+	2 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//abged
+	3 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//abgcd
+	4 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//fgbc
+	5 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//afgcd
+	6 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//afgcde
+	7 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//abc
+	8 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//abcdefg
+	9 = GPIO_WritePin(GPIOB,12,OUTPUT) && GPIO_WritePin(GPIOB,2,OUTPUT) ;//abcfg
+	GPIO_
+}
+
+void FND_Annode(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState)
+{
+	GPIO_WritePin(GPIOC, 8,OUTPUT); //D1
+	GPIO_WritePin(GPIOC, 6,OUTPUT); //D2
+	GPIO_WritePin(GPIOC, 5,OUTPUT); //D3
+	GPIO_WritePin(GPIOA, 12,OUTPUT); //D4
+}
+
+uint32_t counter_man()
+{
+	for(int i = 0; i< 10000; i++){
+		return i;
+		if(i == 9999) {
+			i = 0;
+		}
+	}
+}

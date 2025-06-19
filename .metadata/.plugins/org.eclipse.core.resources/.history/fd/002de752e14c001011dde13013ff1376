@@ -1,0 +1,136 @@
+#include "FND.h"
+#include "GPIO.h"
+
+typedef struct{
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+	uint32_t prevState;
+}FND_Handler_t;
+
+
+/*
+void Decode_Data(uint32_t counter_man)
+{
+
+	GPIO_WritePin(GPIOA,11,PIN_RESET);  //a
+	GPIO_WritePin(GPIOB,12,PIN_RESET);   //b
+	GPIO_WritePin(GPIOB,2,PIN_RESET);  //c
+	GPIO_WritePin(GPIOB,1,PIN_RESET);   //d
+	GPIO_WritePin(GPIOB,15,PIN_RESET);  //e
+	GPIO_WritePin(GPIOB,14,PIN_RESET); //f
+	GPIO_WritePin(GPIOB,13,PIN_RESET);  //g
+
+	switch(counter_man())
+	{
+
+	case 0 :
+			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
+		  GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+		  GPIO_WritePin(GPIOB,2,PIN_SET);   //c
+		  GPIO_WritePin(GPIOB,1,PIN_SET);   //d
+		  GPIO_WritePin(GPIOB,15,PIN_SET);   //e
+		  GPIO_WritePin(GPIOB,14,PIN_SET); //f
+		//abcdfe
+
+	case 1 :
+			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
+		//bc
+
+	case 2 :
+			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
+			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+			GPIO_WritePin(GPIOB,1,PIN_SET);  //d
+			GPIO_WritePin(GPIOB,15,PIN_SET);   //e
+		//abged
+
+	case 3 :
+			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
+			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
+		//abgcd
+
+	case 4 :
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);//c
+			GPIO_WritePin(GPIOB,14,PIN_SET); //f
+		//fgbc
+
+	case 5 :
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
+			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
+			GPIO_WritePin(GPIOB,14,PIN_SET);  //f
+			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
+		//afgcd
+
+	case 6 :
+			GPIO_WritePin(GPIOB,13,PIN_SET); //g
+			GPIO_WritePin(GPIOA,11,PIN_SET); //a
+			GPIO_WritePin(GPIOB,2,PIN_SET); //c
+			GPIO_WritePin(GPIOB,14,PIN_SET); //f
+			GPIO_WritePin(GPIOB,15,PIN_SET);  //e
+			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
+	//afgcde
+
+	case 7 :
+			GPIO_WritePin(GPIOA,11,PIN_SET); //a
+			GPIO_WritePin(GPIOB,12,PIN_SET); //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);//c
+			//abc
+
+	case 8 :
+			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
+			GPIO_WritePin(GPIOB,12,PIN_SET);   //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
+			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
+			GPIO_WritePin(GPIOB,15,PIN_SET);  //e
+			GPIO_WritePin(GPIOB,14,PIN_SET); //f
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+		//abcdefg
+
+	case 9 :
+			GPIO_WritePin(GPIOA,11,PIN_SET); //a
+			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
+			GPIO_WritePin(GPIOB,2,PIN_SET);   //c
+			GPIO_WritePin(GPIOB,14,PIN_SET);//f
+			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
+		//abcfg
+
+	}
+
+}
+*/
+void FND_Init()
+{
+	GPIO_WritePin(GPIOC, 8, PIN_SET); //D1
+	GPIO_WritePin(GPIOC, 6, PIN_SET); //D2
+	GPIO_WritePin(GPIOC, 5, PIN_SET); //D3
+	GPIO_WritePin(GPIOA, 12,PIN_SET); //D4
+}
+
+void FND_Comm()
+{
+
+}
+
+void digit_splitter()
+{
+
+}
+
+uint32_t counter_man()
+{
+	int result = 0;
+	for(int i = 0; i< 10000; i++){
+		result = i;
+		if(i >= 10000) {
+			i = 0;
+		}
+	}
+	return result;
+}

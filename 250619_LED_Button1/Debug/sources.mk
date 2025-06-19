@@ -24,6 +24,7 @@ C_DEPS :=
 SUBDIRS := \
 Src/ap \
 Src/driver/Button \
+Src/driver/FND \
 Src/driver/GPIO \
 Src/driver/LedBar \
 Src/driver/SystemClock \

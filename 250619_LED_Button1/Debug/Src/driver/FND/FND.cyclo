@@ -1,0 +1,4 @@
+../Src/driver/FND/FND.c:108:6:FND_Init	1
+../Src/driver/FND/FND.c:116:6:FND_Comm	1
+../Src/driver/FND/FND.c:121:6:digit_splitter	1
+../Src/driver/FND/FND.c:126:10:counter_man	3

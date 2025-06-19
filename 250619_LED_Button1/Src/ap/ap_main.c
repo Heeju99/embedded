@@ -1,56 +1,52 @@
 #include "ap_main.h"
 
-Button_Handler_t hBtnLeft;
-Button_Handler_t hBtnRight;
-Button_Handler_t hBtnOnOff;
-Button_Handler_t hBtnStart;
+enum {RUN, STOP, CLEAR};
+
+Button_Handler_t hBtnRun;
+Button_Handler_t hBtnStop;
+Button_Handler_t hBtnClear;
 
 int ap_main()
 {
-	uint8_t data;
-	int led_state;
+	uint8_t data = 1;
+	int led_state = CLEAR;
 
 
 	while(1)
 	{
-		if(Button_GetState(&hBtnStart) == ACT_PUSHED){
-			uint8_t data = 0;
-			led_state = 2;
-		}
 
 		switch(led_state)
 		{
-			case 0 : //left
+			case RUN :
 				data = (data << 1) | (data >> 7);
-				if(Button_GetState(&hBtnOnOff) == ACT_PUSHED){
-					led_state = 2;
-				} else if(Button_GetState(&hBtnRight) == ACT_PUSHED){
-					led_state = 1;
+				LEDBar_Write(data);
+				if(Button_GetState(&hBtnClear) == ACT_PUSHED){
+					led_state = CLEAR;
+				} else if(Button_GetState(&hBtnStop) == ACT_PUSHED){
+					led_state = STOP;
 				}
 				break;
 
-			case 1 : //right
+			case STOP :
 				data = (data >> 1) | (data << 7);
-				if(Button_GetState(&hBtnLeft) == ACT_PUSHED){
-					led_state = 0;
-				} else if(Button_GetState(&hBtnOnOff) == ACT_PUSHED){
-					led_state = 2;
+				LEDBar_Write(data);
+				if(Button_GetState(&hBtnRun) == ACT_PUSHED){
+					led_state = RUN;
+				} else if(Button_GetState(&hBtnClear) == ACT_PUSHED){
+					led_state = CLEAR;
 				}
 				break;
 
-			case 2 : //case off
-				data = 0;
-				if(Button_GetState(&hBtnLeft) == ACT_PUSHED){
-					data = 1;
-					led_state = 0;
-				} else if(Button_GetState(&hBtnRight) == ACT_PUSHED){
-					data = 1;
-					led_state = 1;
+			case CLEAR :
+				LEDBar_Write(0x00);
+				if(Button_GetState(&hBtnRun) == ACT_PUSHED){
+					led_state = RUN;
+				} else if(Button_GetState(&hBtnStop) == ACT_PUSHED){
+					led_state = STOP;
 				}
 				break;
 			}
-			LEDBar_Write(data);
-			delay(100);
+		delay(100);
 	}
 	return 0;
 }
@@ -59,9 +55,9 @@ void ap_Init()
 {
 	SystemClock_Init();
 	LedBar_Init();
-	Button_Init(&hBtnStart, GPIOC, 13);
-	Button_Init(&hBtnLeft, GPIOB, 5);
-	Button_Init(&hBtnRight, GPIOB, 3);
-	Button_Init(&hBtnOnOff, GPIOA, 10);
+	FND_Init();
+	Button_Init(&hBtnRun, GPIOB, 5);
+	Button_Init(&hBtnStop, GPIOB, 3);
+	Button_Init(&hBtnClear, GPIOA, 10);
 }
 
