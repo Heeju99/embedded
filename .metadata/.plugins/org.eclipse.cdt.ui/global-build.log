@@ -1,21 +1,21 @@
-10:22:20 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+12:05:02 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250619_LED_Button1/Src/driver/GPIO" -I"C:/cubespace/250619_LED_Button1/Src/driver/LedBar" -I"C:/cubespace/250619_LED_Button1/Src/driver/SystemClock" -I"C:/cubespace/250619_LED_Button1/Src/ap" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
+arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250619_LED_Button1/Src/driver/GPIO" -I"C:/cubespace/250619_LED_Button1/Src/driver/LedBar" -I"C:/cubespace/250619_LED_Button1/Src/driver/SystemClock" -I"C:/cubespace/250619_LED_Button1/Src/ap" -I"C:/cubespace/250619_LED_Button1/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
 arm-none-eabi-gcc -o "250619_LED_Button1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250619_LED_Button1\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250619_LED_Button1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 250619_LED_Button1.elf
  
 arm-none-eabi-size  250619_LED_Button1.elf 
 arm-none-eabi-objdump -h -S 250619_LED_Button1.elf  > "250619_LED_Button1.list"
    text	   data	    bss	    dec	    hex	filename
-   1240	     64	   1568	   2872	    b38	250619_LED_Button1.elf
+   1472	     68	   1564	   3104	    c20	250619_LED_Button1.elf
 Finished building: default.size.stdout
  
 Finished building: 250619_LED_Button1.list
  
-10:22:25 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+12:05:05 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
 make -j16 all 
 arm-none-eabi-size  250619_LED_Button1.elf 
    text	   data	    bss	    dec	    hex	filename
-   1240	     64	   1568	   2872	    b38	250619_LED_Button1.elf
+   1472	     68	   1564	   3104	    c20	250619_LED_Button1.elf
 Finished building: default.size.stdout
  

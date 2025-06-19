@@ -23,6 +23,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Src/ap \
+Src/driver/Button \
 Src/driver/GPIO \
 Src/driver/LedBar \
 Src/driver/SystemClock \

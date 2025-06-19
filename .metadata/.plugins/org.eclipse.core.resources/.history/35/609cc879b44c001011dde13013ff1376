@@ -1,0 +1,13 @@
+#include "Button.h"
+
+typedef enum {NO_ACT, RELEASED, PUSHED} button_state_t;
+
+int Button_Init()
+{
+	GPIO_init(GPIOC,13,INPUT);
+}
+
+int Button_GetState(button_state_t)
+{
+	return PUSHED ;
+}

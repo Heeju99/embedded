@@ -3,6 +3,7 @@
 #include "GPIO.h"
 #include "LedBar.h"
 #include "SystemClock.h"
+#include "Button.h"
 
 void ap_Init();
 int ap_main();

@@ -1,0 +1,2 @@
+../Src/driver/Button/Button.c:5:5:Button_Init	1
+../Src/driver/Button/Button.c:10:16:Button_GetState	5

@@ -13,6 +13,7 @@ RM := rm -rf
 -include Src/driver/SystemClock/subdir.mk
 -include Src/driver/LedBar/subdir.mk
 -include Src/driver/GPIO/subdir.mk
+-include Src/driver/Button/subdir.mk
 -include Src/ap/subdir.mk
 -include Src/subdir.mk
 -include objects.mk

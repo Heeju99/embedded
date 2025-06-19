@@ -23,7 +23,7 @@ void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState)
 
 uint32_t GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint32_t pinNum)
 {
-   return !((GPIOx->IDR & (1U<<pinNum)) == 0);
+   return ((GPIOx->IDR & (1U<<pinNum)) ? 1: 0);
 }
 
 void GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t pinNum)
