@@ -147,10 +147,6 @@ int main(void)
 
 		LEDBar_Write(data);
 
-
-		//LEDBar_Write(0x55);
-		//delay();
-		//delay();
 	}
 }
 
