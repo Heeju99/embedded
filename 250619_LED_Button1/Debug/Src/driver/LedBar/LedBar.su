@@ -1,0 +1,2 @@
+../Src/driver/LedBar/LedBar.c:20:6:LedBar_Init	8	static
+../Src/driver/LedBar/LedBar.c:32:6:LEDBar_Write	24	static
