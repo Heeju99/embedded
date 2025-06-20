@@ -1,2 +1,4 @@
-../Src/ap/ap_main.c:9:5:ap_main	16	static
-../Src/ap/ap_main.c:59:6:ap_Init	8	static
+../Inc/core_cm4.h:1684:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Src/ap/ap_main.c:10:6:TIM2_IRQHandler	8	static
+../Src/ap/ap_main.c:17:5:ap_main	56	static
+../Src/ap/ap_main.c:162:6:ap_Init	8	static

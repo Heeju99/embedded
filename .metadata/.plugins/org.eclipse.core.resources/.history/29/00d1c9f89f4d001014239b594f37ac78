@@ -1,0 +1,10 @@
+
+#ifndef DRIVER_SYSTICK_SYSTICK_H_
+#define DRIVER_SYSTICK_SYSTICK_H_
+
+void SysTick_Init();
+uint32_t getTick();
+void SysTick_Start();
+void SysTick_Start();
+
+#endif /* DRIVER_SYSTICK_SYSTICK_H_ */

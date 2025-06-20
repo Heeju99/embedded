@@ -5,6 +5,8 @@
 #include "SystemClock.h"
 #include "Button.h"
 #include "FND_prof.h"
+#include "TIM.h"
+#include "SysTick.h"
 
 void ap_Init();
 int ap_main();

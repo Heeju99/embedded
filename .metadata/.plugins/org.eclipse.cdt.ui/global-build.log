@@ -1,21 +1,29 @@
-13:29:44 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
+20:58:51 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/driver/FND_prof/FND_prof.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/ap" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/Button" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/FND_prof" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/GPIO" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/LedBar" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/SystemClock" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/FND_prof/FND_prof.d" -MT"Src/driver/FND_prof/FND_prof.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/FND_prof/FND_prof.o"
+arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/ap" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/Button" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/FND_prof" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/GPIO" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/LedBar" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/SystemClock" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/TIM" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/SysTick" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
+../Src/ap/ap_main.c: In function 'ap_main':
+../Src/ap/ap_main.c:22:12: warning: unused variable 'data' [-Wunused-variable]
+   22 |    uint8_t data = 1;
+      |            ^~~~
+../Src/ap/ap_main.c: In function 'ap_Init':
+../Src/ap/ap_main.c:170:4: warning: implicit declaration of function 'TIM_Init' [-Wimplicit-function-declaration]
+  170 |    TIM_Init(TIM2, 16-1,1000-1); //100MHz를 분주하기 위해 psc =16, arr = 1000으로 설정  -> 1ms
+      |    ^~~~~~~~
 arm-none-eabi-gcc -o "250620_FND_TIM_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250620_FND_TIM_Interrupt\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_FND_TIM_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 250620_FND_TIM_Interrupt.elf
  
 arm-none-eabi-size  250620_FND_TIM_Interrupt.elf 
 arm-none-eabi-objdump -h -S 250620_FND_TIM_Interrupt.elf  > "250620_FND_TIM_Interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   2404	    160	   1608	   4172	   104c	250620_FND_TIM_Interrupt.elf
+   3372	    104	   1616	   5092	   13e4	250620_FND_TIM_Interrupt.elf
 Finished building: default.size.stdout
  
 Finished building: 250620_FND_TIM_Interrupt.list
  
-13:29:49 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
+20:58:54 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
 make -j16 all 
 arm-none-eabi-size  250620_FND_TIM_Interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-   2404	    160	   1608	   4172	   104c	250620_FND_TIM_Interrupt.elf
+   3372	    104	   1616	   5092	   13e4	250620_FND_TIM_Interrupt.elf
 Finished building: default.size.stdout
  

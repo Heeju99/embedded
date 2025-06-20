@@ -10,7 +10,9 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Startup/subdir.mk
+-include Src/driver/TIM/subdir.mk
 -include Src/driver/SystemClock/subdir.mk
+-include Src/driver/SysTick/subdir.mk
 -include Src/driver/LedBar/subdir.mk
 -include Src/driver/GPIO/subdir.mk
 -include Src/driver/FND_prof/subdir.mk

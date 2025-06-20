@@ -1,0 +1,111 @@
+#include "ap_main.h"
+
+Button_Handler_t hBtnMode;
+Button_Handler_t hBtnRun;
+Button_Handler_t hBtnClear;
+
+enum {WATCH, ST_STOP, ST_RUN, ST_CLEAR};
+
+void TIM2_IRQHandler()
+{
+	incTick();
+	FND_DisplayData();
+	TIM_ClearUIFlag(TIM2); //flag clear
+}
+
+int ap_main()
+{
+
+   uint8_t data = 1;
+   uint16_t counter = 0;
+   uint16_t start_counter = 1200;
+   int state = WATCH;
+   uint32_t prevCounterTime = 0;
+
+   while(1)
+   {
+	   //if(getTick() - prevCounterTime >= 1000){ //0.1초
+	   //prevCounterTime = getTick();
+	   //FND_WriteData(counter++);
+	   //}
+	   switch(state){
+
+	   case WATCH :
+		   FND_WriteData(start_counter);
+
+		   if(getTick() - prevCounterTime >= 10000){ //1초
+			   prevCounterTime = getTick();
+			   start_counter++;
+			   //FND_WriteData(start_counter++);
+		   }
+
+			if(Button_GetState(&hBtnMode) == ACT_PUSHED){
+				state = ST_STOP;
+				FND_WriteData(0);
+				counter = 0;
+			}
+		   break;
+
+	   case ST_STOP:
+		    counter = counter;
+			if(Button_GetState(&hBtnMode) == ACT_PUSHED){
+				state = WATCH;
+			}
+			else if(Button_GetState(&hBtnRun) == ACT_PUSHED){
+				state = ST_RUN;
+			}
+			else if(Button_GetState(&hBtnClear) == ACT_PUSHED){
+				state = ST_CLEAR;
+			}
+		   break;
+
+	   case ST_RUN:
+		   if(getTick() - prevCounterTime >= 1000){ //0.1초
+			   prevCounterTime = getTick();
+			   FND_WriteData(counter++);
+		   }
+
+
+			if(Button_GetState(&hBtnMode) == ACT_PUSHED){
+				state = WATCH;
+			}
+			else if(Button_GetState(&hBtnRun) == ACT_PUSHED){
+				state = ST_STOP;
+			}
+		   break;
+
+	   case ST_CLEAR:
+		   counter = 0;
+		    FND_WriteData(counter);
+			if(Button_GetState(&hBtnMode) == ACT_PUSHED){
+				state = WATCH;
+			}
+			else if(Button_GetState(&hBtnRun) == ACT_PUSHED){
+				state = ST_STOP;
+			}
+
+		   break;
+	   }
+
+   }
+   return 0;
+}
+
+void ap_Init()
+{
+   SystemClock_Init();
+   LedBar_Init();
+   Button_Init(&hBtnMode, GPIOB, 5);
+   Button_Init(&hBtnRun, GPIOB, 3);
+   Button_Init(&hBtnClear, GPIOA, 10);
+   FND_Init();
+   TIM_Init(TIM2, 16-1,1000-1); //100MHz를 분주하기 위해 psc =16, arr = 1000으로 설정  -> 1ms
+   TIM_CntStart(TIM2);
+   TIM_UInterEnable(TIM2);  //Interrupt 용, 내부적으로 Count값 증가
+   NVIC_EnableIRQ(TIM2_IRQn); //TIM2를 등록하여 사용
+
+   //TIMER 5번은 Interrupt없이 Tick 세기 위해 사용
+  // TIM_Init(TIM5, 16000-1,0xffffffff);
+   //SysTick_Init(TIM5);
+   //SysTick_Start();
+}
