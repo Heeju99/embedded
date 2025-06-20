@@ -1,4 +1,4 @@
-15:54:30 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
+11:38:12 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
 make -j16 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250618_GPIO_BareMetal/Src/driver/GPIO" -I"C:/cubespace/250618_GPIO_BareMetal/Src/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:25: warning: "PERIPH_BASE" redefined
@@ -90,5 +90,5 @@ Finished building: default.size.stdout
 Finished building: 250618_GPIO_BareMetal.list
  
 
-15:54:31 Build Finished. 0 errors, 13 warnings. (took 589ms)
+11:38:13 Build Finished. 0 errors, 13 warnings. (took 596ms)
 

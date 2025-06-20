@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250530_OV7670,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250530_vga_blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250618_GPIO_BareMetal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250618_LEDControl Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250619_LED_Button1 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250530_OV7670,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250530_vga_blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250618_GPIO_BareMetal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250618_LEDControl Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250619_LED_Button1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:250620_FND_TIM_Interrupt
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250530_OV7670/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250530_OV7670/activeLaunchTarget=null\:---

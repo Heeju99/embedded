@@ -1,29 +1,21 @@
-09:50:22 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+13:29:44 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250619_LED_Button1/Src/driver/GPIO" -I"C:/cubespace/250619_LED_Button1/Src/driver/LedBar" -I"C:/cubespace/250619_LED_Button1/Src/driver/SystemClock" -I"C:/cubespace/250619_LED_Button1/Src/ap" -I"C:/cubespace/250619_LED_Button1/Src/driver/Button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-../Src/ap/ap_main.c: In function 'ap_main':
-../Src/ap/ap_main.c:39:25: warning: implicit declaration of function 'FND_Write' [-Wimplicit-function-declaration]
-   39 |                         FND_Write(digit_1000, DP, 1);
-      |                         ^~~~~~~~~
-../Src/ap/ap_main.c: In function 'ap_Init':
-../Src/ap/ap_main.c:97:9: warning: implicit declaration of function 'FND_Init' [-Wimplicit-function-declaration]
-   97 |         FND_Init();
-      |         ^~~~~~~~
-arm-none-eabi-gcc -o "250619_LED_Button1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250619_LED_Button1\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250619_LED_Button1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250619_LED_Button1.elf
+arm-none-eabi-gcc "../Src/driver/FND_prof/FND_prof.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/ap" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/Button" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/FND_prof" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/GPIO" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/LedBar" -I"C:/cubespace/250620_FND_TIM_Interrupt/Src/driver/SystemClock" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/driver/FND_prof/FND_prof.d" -MT"Src/driver/FND_prof/FND_prof.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/driver/FND_prof/FND_prof.o"
+arm-none-eabi-gcc -o "250620_FND_TIM_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250620_FND_TIM_Interrupt\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250620_FND_TIM_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250620_FND_TIM_Interrupt.elf
  
-arm-none-eabi-size  250619_LED_Button1.elf 
-arm-none-eabi-objdump -h -S 250619_LED_Button1.elf  > "250619_LED_Button1.list"
+arm-none-eabi-size  250620_FND_TIM_Interrupt.elf 
+arm-none-eabi-objdump -h -S 250620_FND_TIM_Interrupt.elf  > "250620_FND_TIM_Interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   3808	     96	   1600	   5504	   1580	250619_LED_Button1.elf
+   2404	    160	   1608	   4172	   104c	250620_FND_TIM_Interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 250619_LED_Button1.list
+Finished building: 250620_FND_TIM_Interrupt.list
  
-09:50:25 **** Incremental Build of configuration Debug for project 250619_LED_Button1 ****
+13:29:49 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
 make -j16 all 
-arm-none-eabi-size  250619_LED_Button1.elf 
+arm-none-eabi-size  250620_FND_TIM_Interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-   3808	     96	   1600	   5504	   1580	250619_LED_Button1.elf
+   2404	    160	   1608	   4172	   104c	250620_FND_TIM_Interrupt.elf
 Finished building: default.size.stdout
  

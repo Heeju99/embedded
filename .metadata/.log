@@ -1337,3 +1337,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-06-20 09:12:30.297
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-20 10:40:47.540
+!MESSAGE Indexed '250620_FND_TIM_Interrupt' (3 sources, 53 headers) in 0.36 sec: 1,954 declarations; 2,863 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-20 11:53:04.440
+!MESSAGE Indexed '250620_FND_TIM_Interrupt' (9 sources, 64 headers) in 0.424 sec: 2,779 declarations; 4,678 references; 3 unresolved inclusions; 22 syntax errors; 6 unresolved names (0.08%)

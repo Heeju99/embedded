@@ -1,0 +1,84 @@
+# include "FND_prof.h"
+
+enum {DIGIT_1, DIGIT_10, DIGIT_100, DIGIT_1000};
+
+typedef struct {
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+} FND_TypeDef;
+
+FND_TypeDef fndDigitCom[4] = {
+		{GPIOC, 8},
+		{GPIOC, 6},
+		{GPIOC, 5},
+		{GPIOA, 12}
+};
+
+uint16_t fndDisplayNum = 0;
+
+//write fndDisplayNum
+void FND_WriteData(uint16_t data)
+{
+	fndDisplayNum = data;
+}
+
+//read fndDisplayNum
+uint16_t FND_ReadData()
+{
+	return fndDisplayNum;
+}
+
+//display fndDisplayNUm
+void FND_DisplayData()
+{
+
+
+	static int digitPos = 0;
+
+	digitPos = (digitPos + 1) % 4;
+	//인터럽트가 발생하면 한 자리씩 출력한다.
+	switch(digitPos){
+		case DIGIT_1 :
+			FND_DisplayOff(); //잔상을 제거하기 위해
+			FND_DisplayDigit(digitPos, (fndDisplayNum % 10));
+			FND_DisplayOn();
+			break;
+		case DIGIT_10 :
+			FND_DisplayOff();
+			FND_DisplayDigit(digitPos, (fndDisplayNum / 10) %10 );
+			FND_DisplayOn();
+			break;
+		case DIGIT_100 :
+			FND_DisplayOff();
+			FND_DisplayDigit(digitPos, (fndDisplayNum/ 100) % 10);
+			FND_DisplayOn();
+			break;
+		case DIGIT_1000 :
+			FND_DisplayOff();
+			FND_DisplayDigit(digitPos, (fndDisplayNum/1000) % 10);
+			FND_DisplayOn();
+			break;
+	}
+
+}
+
+void FND_DisplayDigit()
+{
+
+}
+
+void FND_DisplayOn()
+{
+	GPIO_WritePin(GPIOC, 8, PIN_SET);
+	GPIO_WritePin(GPIOC, 6, PIN_SET);
+	GPIO_WritePin(GPIOC, 5, PIN_SET);
+	GPIO_WritePin(GPIOA, 12, PIN_SET);
+}
+
+void FND_DisplayOff()
+{
+	GPIO_WritePin(GPIOC, 8, PIN_RESET);
+	GPIO_WritePin(GPIOC, 6, PIN_RESET);
+	GPIO_WritePin(GPIOC, 5, PIN_RESET);
+	GPIO_WritePin(GPIOA, 12, PIN_RESET);
+}
