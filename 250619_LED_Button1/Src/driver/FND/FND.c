@@ -4,134 +4,182 @@
 typedef struct{
 	GPIO_TypeDef *GPIOx;
 	uint32_t pinNum;
-	uint32_t prevState;
-}FND_Handler_t;
+}SEG_TypeDef;
 
+SEG_TypeDef seg[8] = {
+		{GPIOA, 11},
+		{GPIOB, 12},
+		{GPIOB, 2},
+		{GPIOB, 1},
+		{GPIOB, 15},
+		{GPIOB, 14},
+		{GPIOB, 13},
+		{GPIOC, 4}
+};
 
+SEG_TypeDef seg_sel[4] = {
+		{GPIOC, 8},
+		{GPIOC, 6},
+		{GPIOC, 5},
+		{GPIOA, 12}
+};
 
-void Decode_Data(uint32_t counter_man)
-{
-	GPIO_WritePin(GPIOA,11,PIN_RESET);  //a
-	GPIO_WritePin(GPIOB,12,PIN_RESET);   //b
-	GPIO_WritePin(GPIOB,2,PIN_RESET);  //c
-	GPIO_WritePin(GPIOB,1,PIN_RESET);   //d
-	GPIO_WritePin(GPIOB,15,PIN_RESET);  //e
-	GPIO_WritePin(GPIOB,14,PIN_RESET); //f
-	GPIO_WritePin(GPIOB,13,PIN_RESET);  //g
-
-	int result = 0;
-	for(int i = 0; i < 10000; i++){
-		result = i;
-		if(result == 10000){
-			i = 0;
-		}
-		return result;
-	}
-
-	switch(result)
-	{
-
-	case 0 :
-			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
-		  GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-		  GPIO_WritePin(GPIOB,2,PIN_SET);   //c
-		  GPIO_WritePin(GPIOB,1,PIN_SET);   //d
-		  GPIO_WritePin(GPIOB,15,PIN_SET);   //e
-		  GPIO_WritePin(GPIOB,14,PIN_SET); //f
-		//abcdfe
-
-	case 1 :
-			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
-		//bc
-
-	case 2 :
-			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
-			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-			GPIO_WritePin(GPIOB,1,PIN_SET);  //d
-			GPIO_WritePin(GPIOB,15,PIN_SET);   //e
-		//abged
-
-	case 3 :
-			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
-			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
-		//abgcd
-
-	case 4 :
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);//c
-			GPIO_WritePin(GPIOB,14,PIN_SET); //f
-		//fgbc
-
-	case 5 :
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
-			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
-			GPIO_WritePin(GPIOB,14,PIN_SET);  //f
-			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
-		//afgcd
-
-	case 6 :
-			GPIO_WritePin(GPIOB,13,PIN_SET); //g
-			GPIO_WritePin(GPIOA,11,PIN_SET); //a
-			GPIO_WritePin(GPIOB,2,PIN_SET); //c
-			GPIO_WritePin(GPIOB,14,PIN_SET); //f
-			GPIO_WritePin(GPIOB,15,PIN_SET);  //e
-			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
-	//afgcde
-
-	case 7 :
-			GPIO_WritePin(GPIOA,11,PIN_SET); //a
-			GPIO_WritePin(GPIOB,12,PIN_SET); //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);//c
-			//abc
-
-	case 8 :
-			GPIO_WritePin(GPIOA,11,PIN_SET);  //a
-			GPIO_WritePin(GPIOB,12,PIN_SET);   //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);  //c
-			GPIO_WritePin(GPIOB,1,PIN_SET);   //d
-			GPIO_WritePin(GPIOB,15,PIN_SET);  //e
-			GPIO_WritePin(GPIOB,14,PIN_SET); //f
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-		//abcdefg
-
-	case 9 :
-			GPIO_WritePin(GPIOA,11,PIN_SET); //a
-			GPIO_WritePin(GPIOB,12,PIN_SET);  //b
-			GPIO_WritePin(GPIOB,2,PIN_SET);   //c
-			GPIO_WritePin(GPIOB,14,PIN_SET);//f
-			GPIO_WritePin(GPIOB,13,PIN_SET);  //g
-		//abcfg
-	}
-}
-
-
-void FND_Init()
-{
-	GPIO_WritePin(GPIOC, 8, PIN_SET); //D1
-	GPIO_WritePin(GPIOC, 6, PIN_SET); //D2
-	GPIO_WritePin(GPIOC, 5, PIN_SET); //D3
-	GPIO_WritePin(GPIOA, 12,PIN_SET); //D4
-}
-
-
-/// 변경해 줘야함
-void FND_Comm()
-{
-	switch()
-	{
-		case 0x00 : seg_comm = 4'b1110;
-		case 0x01 : seg_comm = 4'b1101;
-		case 0x02 : seg_comm = 4'b1011;
-		case 0x03 : seg_comm = 4'b0111;
-
-	}
+void FND_Init(){
+	GPIO_Init(GPIOA, 11, OUTPUT);
+	GPIO_Init(GPIOB, 12, OUTPUT);
+	GPIO_Init(GPIOB, 2, OUTPUT);
+	GPIO_Init(GPIOB, 1, OUTPUT);
+	GPIO_Init(GPIOB, 15, OUTPUT);
+	GPIO_Init(GPIOB, 14, OUTPUT);
+	GPIO_Init(GPIOB, 13, OUTPUT);
+	GPIO_Init(GPIOC, 4, OUTPUT);
+	GPIO_Init(GPIOC, 8, OUTPUT);
+	GPIO_Init(GPIOC, 6, OUTPUT);
+	GPIO_Init(GPIOC, 5, OUTPUT);
+	GPIO_Init(GPIOA, 12, OUTPUT);
 
 }
 
+void FND_Write(uint32_t data, uint8_t DOT, uint8_t sel)
+{
+	switch(sel){
+	case 0:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_SET);
+		break;
+	case 1:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_SET);
+		break;
+	case 2:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_SET);
+		break;
+	case 3:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_SET);
+		break;
+	case 4:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_RESET);
+		break;
+	case 5:
+		GPIO_WritePin(seg_sel[0].GPIOx, seg_sel[0].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[1].GPIOx, seg_sel[1].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[2].GPIOx, seg_sel[2].pinNum, PIN_RESET);
+		GPIO_WritePin(seg_sel[3].GPIOx, seg_sel[3].pinNum, PIN_RESET);
+		break;
+	}
+	switch(data){
+	case 0:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_SET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 1:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 2:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_SET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 3:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 4:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 5:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 6:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_SET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 7:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 8:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_SET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	case 9:
+		GPIO_WritePin(seg[0].GPIOx, seg[0].pinNum, PIN_SET);
+		GPIO_WritePin(seg[1].GPIOx, seg[1].pinNum, PIN_SET);
+		GPIO_WritePin(seg[2].GPIOx, seg[2].pinNum, PIN_SET);
+		GPIO_WritePin(seg[3].GPIOx, seg[3].pinNum, PIN_SET);
+		GPIO_WritePin(seg[4].GPIOx, seg[4].pinNum, PIN_RESET);
+		GPIO_WritePin(seg[5].GPIOx, seg[5].pinNum, PIN_SET);
+		GPIO_WritePin(seg[6].GPIOx, seg[6].pinNum, PIN_SET);
+		GPIO_WritePin(seg[7].GPIOx, seg[7].pinNum, DOT);
+		break;
+	}
+}

@@ -8,7 +8,7 @@ void Button_Init(Button_Handler_t *hbtn, GPIO_TypeDef *GPIOx, uint32_t pinNum)
 	hbtn->pinNum = pinNum;
 	hbtn->prevState = RELEASED;
 
-	GPIO_init(hbtn->GPIOx, hbtn->pinNum, INPUT);
+	GPIO_Init(hbtn->GPIOx, hbtn->pinNum, INPUT);
 }
 
 button_state_t Button_GetState(Button_Handler_t *hbtn)

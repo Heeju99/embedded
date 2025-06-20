@@ -1,6 +1,6 @@
 #include "GPIO.h"
 
-void GPIO_init(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_mode_t pinMode)
+void GPIO_Init(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_mode_t pinMode)
 {
    if(pinMode == OUTPUT) {
       GPIOx->MODER |= (0x01U << (pinNum*2));

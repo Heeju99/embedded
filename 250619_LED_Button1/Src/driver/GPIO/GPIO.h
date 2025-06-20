@@ -14,7 +14,7 @@
 typedef enum {PIN_RESET = 0, PIN_SET} pin_state_t;
 typedef enum {OUTPUT, INPUT} pin_mode_t;
 
-void GPIO_init(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_mode_t pin_mode);
+void GPIO_Init(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_mode_t pin_mode);
 void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pin_state);
 uint32_t GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint32_t pinNum);
 void GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t pinNum);

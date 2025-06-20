@@ -19,14 +19,14 @@ LedBar_TypeDef ledBar[8] = {
 
 void LedBar_Init()
 {
-	GPIO_init(GPIOA,0,OUTPUT);
-	GPIO_init(GPIOA,1,OUTPUT);
-	GPIO_init(GPIOA,4,OUTPUT);
-	GPIO_init(GPIOB,0,OUTPUT);
-	GPIO_init(GPIOC,1,OUTPUT);
-	GPIO_init(GPIOC,0,OUTPUT);
-	GPIO_init(GPIOC,2,OUTPUT);
-	GPIO_init(GPIOC,3,OUTPUT);
+	GPIO_Init(GPIOA,0,OUTPUT);
+	GPIO_Init(GPIOA,1,OUTPUT);
+	GPIO_Init(GPIOA,4,OUTPUT);
+	GPIO_Init(GPIOB,0,OUTPUT);
+	GPIO_Init(GPIOC,1,OUTPUT);
+	GPIO_Init(GPIOC,0,OUTPUT);
+	GPIO_Init(GPIOC,2,OUTPUT);
+	GPIO_Init(GPIOC,3,OUTPUT);
 }
 
 void LEDBar_Write(uint8_t data)
