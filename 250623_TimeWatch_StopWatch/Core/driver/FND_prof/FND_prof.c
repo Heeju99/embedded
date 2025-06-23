@@ -29,11 +29,15 @@ FND_TypeDef fndPin[8] =
 
 //static void FND_DispOff(int fndPos);
 static void FND_DispOn(int fndPos);
-static void FND_DispDigit(uint16_t digit);
+static void FND_DispDigit(uint16_t digit, uint16_t dot);
 static void FND_DispOffALL();
 
 static uint16_t fndDispNum = 0; // FND display main data(외부 파일에서 접근XXX)
 
+uint16_t dot1 = 0xff;
+uint16_t dot2 = 0xff;
+uint16_t dot3 = 0xff;
+uint16_t dot4 = 0xff;
 
 // write fndDisNum
 void FND_WriteData(uint16_t data)
@@ -58,26 +62,22 @@ void FND_DisplayData()
    // -> FND를 끄고 데이터를 바꾸고 다시 킨다.
    case DIGIT_1:
       FND_DispOffALL();
-      FND_DispDigit(fndDispNum%10);
-      //FND_Dot(uint8_t DOT);
+      FND_DispDigit(fndDispNum%10,dot1);
       FND_DispOn(digitPos);
       break;
    case DIGIT_10:
       FND_DispOffALL();
-      FND_DispDigit(fndDispNum/10%10);
-      //FND_Dot(uint8_t DOT);
+      FND_DispDigit(fndDispNum/10%10,dot2);
       FND_DispOn(digitPos);
       break;
    case DIGIT_100:
       FND_DispOffALL();
-      FND_DispDigit(fndDispNum/100%10);
-      //FND_Dot(uint8_t DOT);
+      FND_DispDigit(fndDispNum/100%10,dot3);
       FND_DispOn(digitPos);
       break;
    case DIGIT_1000:
       FND_DispOffALL();
-      FND_DispDigit(fndDispNum/1000%10);
-      //FND_Dot(uint8_t DOT);
+      FND_DispDigit(fndDispNum/1000%10,dot4);
       FND_DispOn(digitPos);
       break;
    }
@@ -97,7 +97,15 @@ void FND_DispOffALL()
    }
 }
 
-void FND_DispDigit(uint16_t digit)
+void FND_Dot(uint8_t dp1, uint8_t dp2, uint8_t dp3, uint8_t dp4)
+{
+     dot1 = dp1;
+     dot2 = dp2;
+     dot3 = dp3;
+     dot4 = dp4;
+}
+
+void FND_DispDigit(uint16_t digit, uint16_t dot)
 {
    const uint8_t segFont[10] = {
          0x3F, // 0
@@ -112,13 +120,39 @@ void FND_DispDigit(uint16_t digit)
          0x6F  // 9
    };
 
+   const uint8_t segFontDP[10] = {
+		   0xC0,
+		   0xF9,
+		   0xA4,
+		   0xB0,
+		   0x99,
+		   0x92,
+		   0x82,
+		   0xF8,
+		   0x80,
+		   0x90,
+   };
+
+
    for(int i=0; i<8; i++){
+	  if(i == 7){
+		  if(!((segFontDP[digit] & ~dot) & (1<<i))){
+			  HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, RESET);    // data = 0 -> offCathode type(Anode type은 반대)
+		  }
+		  else{
+			  HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, SET);      // data = 1 -> onCathode type(Anode type은 반대)
+		  }
+	  }
+	  else
+	  {
 		  if(!(segFont[digit] & (1<<i))){
-			 HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, SET);    // data = 0 -> offCathode type(Anode type은 반대)
+			  HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, SET);    // data = 0 -> offCathode type(Anode type은 반대)
 		  }
 		  else{
 			 HAL_GPIO_WritePin(fndPin[i].GPIOx, fndPin[i].pinNum, RESET);      // data = 1 -> onCathode type(Anode type은 반대)
 		  }
 	   }
+
+   }
 }
 

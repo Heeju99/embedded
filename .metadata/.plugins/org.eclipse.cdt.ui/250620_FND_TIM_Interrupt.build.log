@@ -1,4 +1,4 @@
-20:58:54 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
+17:42:31 **** Incremental Build of configuration Debug for project 250620_FND_TIM_Interrupt ****
 make -j16 all 
 arm-none-eabi-size  250620_FND_TIM_Interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250620_FND_TIM_Interrupt.elf
 Finished building: default.size.stdout
  
 
-20:58:54 Build Finished. 0 errors, 0 warnings. (took 133ms)
+17:42:31 Build Finished. 0 errors, 0 warnings. (took 133ms)
 

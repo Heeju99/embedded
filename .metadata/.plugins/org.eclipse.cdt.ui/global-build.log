@@ -1,20 +1,7 @@
-16:44:29 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
-make -j16 all 
-arm-none-eabi-gcc -o "250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250623_TimeWatch_StopWatch.elf
- 
-arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
-arm-none-eabi-objdump -h -S 250623_TimeWatch_StopWatch.elf  > "250623_TimeWatch_StopWatch.list"
-   text	   data	    bss	    dec	    hex	filename
-  10420	    116	   1692	  12228	   2fc4	250623_TimeWatch_StopWatch.elf
-Finished building: default.size.stdout
- 
-Finished building: 250623_TimeWatch_StopWatch.list
- 
-16:44:31 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+18:00:36 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
 arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-  10420	    116	   1692	  12228	   2fc4	250623_TimeWatch_StopWatch.elf
+  10840	    124	   1692	  12656	   3170	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  

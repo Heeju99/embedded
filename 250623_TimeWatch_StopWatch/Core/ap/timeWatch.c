@@ -7,6 +7,8 @@ typedef struct{
 	uint8_t hour;
 }timeWatch_t;
 
+uint8_t flag = 0;
+
 timeWatch_t timeWatch = {0,0,0,12}; //all 0
 
 void TimeWatch_IncTimeCallBack()
@@ -39,4 +41,14 @@ void TimeWatch_IncTimeCallBack()
 void TimeWatch_Excute()
 {
 	FND_WriteData(timeWatch.hour*100 + timeWatch.min);
+	TimeWatch_Blink();
+}
+
+void TimeWatch_Blink()
+{
+	if ((timeWatch.msec % 1000) < 500 -1) {
+		FND_Dot(0, 0, 0x80, 0);
+	} else {
+		FND_Dot(0, 0, 0, 0);
+	}
 }

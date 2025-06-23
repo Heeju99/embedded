@@ -74,6 +74,8 @@ void StopWatch_Stop()
 		stopWatchState = CLEAR;
 	}
 	FND_WriteData(((stopWatch.min % 10)* 1000) + (stopWatch.sec*10) + (stopWatch.msec/100));
+
+	StopWatch_Blink();
 }
 
 void StopWatch_Run()
@@ -82,6 +84,8 @@ void StopWatch_Run()
 		stopWatchState = STOP;
 	}
 	FND_WriteData(((stopWatch.min % 10)* 1000) + (stopWatch.sec*10) + (stopWatch.msec/100));
+
+	StopWatch_Blink();
 }
 
 void StopWatch_Clear()
@@ -92,4 +96,14 @@ void StopWatch_Clear()
 	stopWatch.min = 0;
 	stopWatch.hour = 0;
 	FND_WriteData(((stopWatch.min % 10)* 1000) + (stopWatch.sec*10) + (stopWatch.msec/100));
+	StopWatch_Blink();
+}
+
+void StopWatch_Blink()
+{
+	if ((stopWatch.msec % 1000) < 500) {
+		FND_Dot(0, 0x80, 0x80, 0);
+	} else {
+		FND_Dot(0, 0, 0, 0);
+	}
 }

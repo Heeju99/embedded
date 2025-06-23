@@ -31,7 +31,6 @@ int ap_main()
 			   modeState = STOP_WATCH;
 		   }
 		   TimeWatch_Excute();
-
 		   break;
 	   case STOP_WATCH :
 		   if(Button_GetState(&hBtnMode) == ACT_RELEASED)

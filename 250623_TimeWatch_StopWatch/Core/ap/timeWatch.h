@@ -7,5 +7,7 @@
 
 void TimeWatch_IncTimeCallBack();
 void TimeWatch_Excute();
+void TimeWatch_Dot();
+void TimeWatch_Blink();
 
 #endif /* AP_TIMEWATCH_H_ */

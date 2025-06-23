@@ -15,5 +15,6 @@ void StopWatch_Execute();
 void StopWatch_Stop();
 void StopWatch_Run();
 void StopWatch_Clear();
+void StopWatch_Blink();
 
 #endif /* AP_STOPWATCH_H_ */
