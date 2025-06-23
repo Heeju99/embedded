@@ -1,21 +1,20 @@
-12:00:06 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+16:44:29 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250623_TimeWatch_StopWatch/Core/ap" -I"C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/Button" -I"C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof" -I"C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/ap_main.d" -MT"Core/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/ap_main.o"
 arm-none-eabi-gcc -o "250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 250623_TimeWatch_StopWatch.elf
  
 arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
 arm-none-eabi-objdump -h -S 250623_TimeWatch_StopWatch.elf  > "250623_TimeWatch_StopWatch.list"
    text	   data	    bss	    dec	    hex	filename
-   9328	    108	   1684	  11120	   2b70	250623_TimeWatch_StopWatch.elf
+  10420	    116	   1692	  12228	   2fc4	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
 Finished building: 250623_TimeWatch_StopWatch.list
  
-12:00:09 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
+16:44:31 **** Incremental Build of configuration Debug for project 250623_TimeWatch_StopWatch ****
 make -j16 all 
 arm-none-eabi-size  250623_TimeWatch_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-   9328	    108	   1684	  11120	   2b70	250623_TimeWatch_StopWatch.elf
+  10420	    116	   1692	  12228	   2fc4	250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  

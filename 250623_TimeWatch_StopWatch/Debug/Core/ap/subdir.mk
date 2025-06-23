@@ -5,13 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/ap/ap_main.c 
+../Core/ap/ap_main.c \
+../Core/ap/stopWatch.c \
+../Core/ap/timeWatch.c 
 
 OBJS += \
-./Core/ap/ap_main.o 
+./Core/ap/ap_main.o \
+./Core/ap/stopWatch.o \
+./Core/ap/timeWatch.o 
 
 C_DEPS += \
-./Core/ap/ap_main.d 
+./Core/ap/ap_main.d \
+./Core/ap/stopWatch.d \
+./Core/ap/timeWatch.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +27,7 @@ Core/ap/%.o Core/ap/%.su Core/ap/%.cyclo: ../Core/ap/%.c Core/ap/subdir.mk
 clean: clean-Core-2f-ap
 
 clean-Core-2f-ap:
-	-$(RM) ./Core/ap/ap_main.cyclo ./Core/ap/ap_main.d ./Core/ap/ap_main.o ./Core/ap/ap_main.su
+	-$(RM) ./Core/ap/ap_main.cyclo ./Core/ap/ap_main.d ./Core/ap/ap_main.o ./Core/ap/ap_main.su ./Core/ap/stopWatch.cyclo ./Core/ap/stopWatch.d ./Core/ap/stopWatch.o ./Core/ap/stopWatch.su ./Core/ap/timeWatch.cyclo ./Core/ap/timeWatch.d ./Core/ap/timeWatch.o ./Core/ap/timeWatch.su
 
 .PHONY: clean-Core-2f-ap
 

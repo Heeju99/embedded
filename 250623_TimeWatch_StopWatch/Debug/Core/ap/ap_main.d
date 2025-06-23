@@ -31,7 +31,7 @@ Core/ap/ap_main.o: ../Core/ap/ap_main.c ../Core/ap/ap_main.h \
  C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/Button/Button.h \
  ../Core/Inc/GPIO.h ../Core/Inc/main.h \
  C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof/FND_prof.h \
- ../Core/Inc/tim.h
+ ../Core/Inc/tim.h ../Core/ap/stopWatch.h ../Core/ap/timeWatch.h
 ../Core/ap/ap_main.h:
 C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/LedBar/LedBar.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -67,3 +67,5 @@ C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/Button/Button.h:
 ../Core/Inc/main.h:
 C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof/FND_prof.h:
 ../Core/Inc/tim.h:
+../Core/ap/stopWatch.h:
+../Core/ap/timeWatch.h:

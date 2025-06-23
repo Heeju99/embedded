@@ -32,7 +32,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h \
  C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/Button/Button.h \
  ../Core/Inc/GPIO.h \
- C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof/FND_prof.h
+ C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof/FND_prof.h \
+ C:/cubespace/250623_TimeWatch_StopWatch/Core/ap/stopWatch.h \
+ C:/cubespace/250623_TimeWatch_StopWatch/Core/ap/timeWatch.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -70,3 +72,5 @@ C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/LedBar/LedBar.h:
 C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/Button/Button.h:
 ../Core/Inc/GPIO.h:
 C:/cubespace/250623_TimeWatch_StopWatch/Core/driver/FND_prof/FND_prof.h:
+C:/cubespace/250623_TimeWatch_StopWatch/Core/ap/stopWatch.h:
+C:/cubespace/250623_TimeWatch_StopWatch/Core/ap/timeWatch.h:

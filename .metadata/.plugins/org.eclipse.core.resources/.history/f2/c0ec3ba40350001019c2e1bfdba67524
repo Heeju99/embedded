@@ -1,0 +1,50 @@
+#include "stopWatch.h"
+
+typedef enum {STOP, RUN, CLEAR} stopwatch_state_t;
+
+typedef struct{
+	uint16_t msec;
+	uint8_t sec;
+	uint8_t min;
+	uint8_t hour;
+}stopWatch_t;
+
+stopWatch_t stopWatch = {0};
+
+
+void StopWatch_IncTimeCallBack()
+{
+
+}
+
+
+void StopWatch_Execute()
+{
+	uint8_t stopWatchState = STOP;
+	switch(stopWatchState) {
+		case  STOP :
+			StopWatch_Stop();
+			break;
+		case  RUN :
+			StopWatch_Run();
+			break;
+		case CLEAR :
+			StopWatch_Clear();
+			break;
+		}
+}
+
+void StopWatch_Run()
+{
+
+}
+
+void StopWatch_Stop()
+{
+
+}
+
+void StopWatch_Clear()
+{
+
+}

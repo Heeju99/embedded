@@ -8,6 +8,8 @@
 "./Core/Src/tim.o"
 "./Core/Startup/startup_stm32f411retx.o"
 "./Core/ap/ap_main.o"
+"./Core/ap/stopWatch.o"
+"./Core/ap/timeWatch.o"
 "./Core/driver/Button/Button.o"
 "./Core/driver/FND_prof/FND_prof.o"
 "./Core/driver/LedBar/LedBar.o"

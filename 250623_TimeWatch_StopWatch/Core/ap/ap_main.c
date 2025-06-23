@@ -1,24 +1,46 @@
 #include "ap_main.h"
 
 Button_Handler_t hBtnMode;
-Button_Handler_t hBtnRun;
+Button_Handler_t hBtnRunStop;
 Button_Handler_t hBtnClear;
 
+typedef enum {TIME_WATCH, STOP_WATCH} watch_state_t;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) //Interrupt 발생시켜 FND 출력
 {
 	if(htim->Instance ==TIM2) {
 		FND_DisplayData();
+
+		TimeWatch_IncTimeCallBack();
+		StopWatch_IncTimeCallBack();
 	}
 }
 
+
 int ap_main()
 {
-	FND_WriteData(1234);
+	watch_state_t modeState = TIME_WATCH;
 	HAL_TIM_Base_Start_IT(&htim2); //start Interrupt
    while(1)
    {
+	   switch(modeState)
+	   {
+	   case TIME_WATCH :
+		   if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+		   {
+			   modeState = STOP_WATCH;
+		   }
+		   TimeWatch_Excute();
 
+		   break;
+	   case STOP_WATCH :
+		   if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+		   {
+			   modeState = TIME_WATCH;
+		   }
+		   StopWatch_Execute();
+		   break;
+	   }
    }
    return 0;
 }
@@ -27,7 +49,8 @@ void ap_Init()
 {
 
    Button_Init(&hBtnMode, GPIOB,  GPIO_PIN_5);
-   Button_Init(&hBtnRun, GPIOB, GPIO_PIN_3);
+   Button_Init(&hBtnRunStop, GPIOB, GPIO_PIN_3);
    Button_Init(&hBtnClear, GPIOA, GPIO_PIN_10);
 
 }
+
