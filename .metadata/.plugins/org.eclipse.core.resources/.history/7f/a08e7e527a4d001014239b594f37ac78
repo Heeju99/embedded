@@ -1,3 +1,0 @@
-# include "FND_prof.h"
-
-uint16_t fndDiplayNum = 0;
