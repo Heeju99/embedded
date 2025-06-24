@@ -1,0 +1,23 @@
+#include "Listener.h"
+
+void Listener_Execute()
+{
+	Listener_CheckButton();
+}
+
+void Listener_CheckButton()
+{
+	if(Button_GetState(&hBtnMode) == ACT_RELEASED){
+		inputData.id = BTN_MODE;
+		inputData.data = BTN_RELEASED;
+		Controller_SetInputData(inputData);
+	} else if (Button_GetState(&hBtnRunStop) == ACT_PUSHED){
+		inputData.id = BTN_RUNSTOP;
+		inputData.data = BTN_PUSHED;
+		Controller_SetInputData(inputData);
+	} else if (Button_GetState(&hBtnClear) == ACT_PUSHED){
+		inputData.id = BTN_CLEAR;
+		inputData.data = BTN_PUSHED;
+		Controller_SetInputData(inputData);
+	}
+}

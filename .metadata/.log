@@ -1400,3 +1400,12 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-06-24 09:41:46.776
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-24 12:23:31.640
+!MESSAGE Indexed '250624_TimeWatch_StopWatch_SequenceStructure' (29 sources, 126 headers) in 1.75 sec: 12,089 declarations; 56,566 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.35%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2025-06-24 14:14:12.588
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2025-06-24 15:12:24.011
+!MESSAGE Won't launch debug session since we failed to locate the binary.

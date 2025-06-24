@@ -1,0 +1,34 @@
+#include "Controller.h"
+
+typedef enum {TIME_WATCH, STOP_WATCH} watchMode_state_t;
+
+watchMode_state_t modeState = TIME_WATCH;
+
+
+void Controller_Execute()
+{
+	Controller_Mode();
+}
+
+void Controller_Mode()
+{
+	   switch(modeState)
+	   {
+	   case TIME_WATCH :
+		   if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+		   {
+			   modeState = STOP_WATCH;
+				//FND_WriteDp(FND_DP_1000 |FND_DP_100 | FND_DP_10 | FND_DP_1, FND_DP_OFF);
+		   }
+		   TimeWatch_Excute();
+		   break;
+	   case STOP_WATCH :
+		   if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+		   {
+			   modeState = TIME_WATCH;
+			   //FND_WriteDp(FND_DP_1000 |FND_DP_100 | FND_DP_10 | FND_DP_1, FND_DP_OFF);
+		   }
+		   StopWatch_Execute();
+		   break;
+	   }
+}

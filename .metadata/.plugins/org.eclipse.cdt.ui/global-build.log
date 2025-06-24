@@ -1,22 +1,28 @@
-11:00:52 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_copy ****
+15:48:39 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_SequenceStructure ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/ap/stopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/ap" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/Button" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/FND_prof" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/stopWatch.d" -MT"Core/ap/stopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/stopWatch.o"
-arm-none-eabi-gcc "../Core/ap/timeWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/ap" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/Button" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/FND_prof" -I"C:/cubespace/250624_TimeWatch_StopWatch_copy/Core/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/timeWatch.d" -MT"Core/ap/timeWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/timeWatch.o"
-arm-none-eabi-gcc -o "250624_TimeWatch_StopWatch_copy.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250624_TimeWatch_StopWatch_copy\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250624_TimeWatch_StopWatch_copy.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250624_TimeWatch_StopWatch_copy.elf
- 
-arm-none-eabi-size  250624_TimeWatch_StopWatch_copy.elf 
-arm-none-eabi-objdump -h -S 250624_TimeWatch_StopWatch_copy.elf  > "250624_TimeWatch_StopWatch_copy.list"
+arm-none-eabi-size  250624_TimeWatch_StopWatch_SequenceStructure.elf 
    text	   data	    bss	    dec	    hex	filename
-  10860	    116	   1692	  12668	   317c	250624_TimeWatch_StopWatch_copy.elf
+  11108	    124	   1708	  12940	   328c	250624_TimeWatch_StopWatch_SequenceStructure.elf
 Finished building: default.size.stdout
  
-Finished building: 250624_TimeWatch_StopWatch_copy.list
- 
-11:00:58 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_copy ****
+15:48:44 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_SequenceStructure ****
 make -j16 all 
-arm-none-eabi-size  250624_TimeWatch_StopWatch_copy.elf 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_SequenceStructure.elf 
    text	   data	    bss	    dec	    hex	filename
-  10860	    116	   1692	  12668	   317c	250624_TimeWatch_StopWatch_copy.elf
+  11108	    124	   1708	  12940	   328c	250624_TimeWatch_StopWatch_SequenceStructure.elf
 Finished building: default.size.stdout
+ 
+15:58:36 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_SequenceStructure ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/src/stopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/Button" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/FND_prof" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/LedBar" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/stopWatch.d" -MT"Core/ap/src/stopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/stopWatch.o"
+arm-none-eabi-gcc -o "250624_TimeWatch_StopWatch_SequenceStructure.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250624_TimeWatch_StopWatch_SequenceStructure\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250624_TimeWatch_StopWatch_SequenceStructure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250624_TimeWatch_StopWatch_SequenceStructure.elf
+ 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_SequenceStructure.elf 
+arm-none-eabi-objdump -h -S 250624_TimeWatch_StopWatch_SequenceStructure.elf  > "250624_TimeWatch_StopWatch_SequenceStructure.list"
+   text	   data	    bss	    dec	    hex	filename
+  11108	    132	   1700	  12940	   328c	250624_TimeWatch_StopWatch_SequenceStructure.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250624_TimeWatch_StopWatch_SequenceStructure.list
  

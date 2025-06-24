@@ -1,0 +1,17 @@
+15:58:36 **** Incremental Build of configuration Debug for project 250624_TimeWatch_StopWatch_SequenceStructure ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/src/stopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/Button" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/FND_prof" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/LedBar" -I"C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/stopWatch.d" -MT"Core/ap/src/stopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/stopWatch.o"
+arm-none-eabi-gcc -o "250624_TimeWatch_StopWatch_SequenceStructure.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250624_TimeWatch_StopWatch_SequenceStructure\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250624_TimeWatch_StopWatch_SequenceStructure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250624_TimeWatch_StopWatch_SequenceStructure.elf
+ 
+arm-none-eabi-size  250624_TimeWatch_StopWatch_SequenceStructure.elf 
+arm-none-eabi-objdump -h -S 250624_TimeWatch_StopWatch_SequenceStructure.elf  > "250624_TimeWatch_StopWatch_SequenceStructure.list"
+   text	   data	    bss	    dec	    hex	filename
+  11108	    132	   1700	  12940	   328c	250624_TimeWatch_StopWatch_SequenceStructure.elf
+Finished building: default.size.stdout
+ 
+Finished building: 250624_TimeWatch_StopWatch_SequenceStructure.list
+ 
+
+15:58:37 Build Finished. 0 errors, 0 warnings. (took 541ms)
+

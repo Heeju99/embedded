@@ -1,4 +1,4 @@
-11:38:11 **** Incremental Build of configuration Debug for project 250530_vga_blink ****
+12:31:23 **** Build of configuration Debug for project 250530_vga_blink ****
 make -j16 all 
 arm-none-eabi-size  250530_vga_blink.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250530_vga_blink.elf
 Finished building: default.size.stdout
  
 
-11:38:12 Build Finished. 0 errors, 0 warnings. (took 395ms)
+12:31:24 Build Finished. 0 errors, 0 warnings. (took 340ms)
 

@@ -1,4 +1,4 @@
-11:38:13 **** Incremental Build of configuration Debug for project 250618_LEDControl ****
+12:31:24 **** Build of configuration Debug for project 250618_LEDControl ****
 make -j16 all 
 arm-none-eabi-size  250618_LEDControl.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250618_LEDControl.elf
 Finished building: default.size.stdout
  
 
-11:38:13 Build Finished. 0 errors, 0 warnings. (took 289ms)
+12:31:24 Build Finished. 0 errors, 0 warnings. (took 335ms)
 

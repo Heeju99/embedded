@@ -1,0 +1,23 @@
+#include "Presenter.h"
+
+void Presenter_OutData(watch_t watchData)
+{
+	if(watchData.id == TIME_WATCH)
+	{
+		Presenter_DispTimeWatch(watchData);
+	}
+	else //STOP_WATCH
+	{
+		Presenter_DispStopWatch(stopWatchData);
+	}
+}
+
+void Presenter_DispTimeWatch(watch_t watchData)
+{
+
+}
+
+void Presenter_DispStopWatch(watch_t stopWatchData)
+{
+
+}
