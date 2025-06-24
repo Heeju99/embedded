@@ -2,3 +2,8 @@
 1750644817943	Delete resource '250623_TimeWatch_StopWatch/Core/driver/TIM'
 1750644827747	Delete resource '250623_TimeWatch_StopWatch/Core/driver/SysTick'
 1750644836712	Delete resource '250623_TimeWatch_StopWatch/Core/driver/SystemClock'
+1750723460316	Delete resource '250623_TimeWatch_StopWatch_add/250623_TimeWatch_StopWatch Debug.launch'
+1750723479500	Delete resource '250623_TimeWatch_StopWatch_add/Debug'
+1750725534738	Rename resource '250623_TimeWatch_StopWatch_add'
+1750725572755	Rename resource '250624_TimeWatch_StopWatch_cpoy'
+1750725613368	Delete resource '250624_TimeWatch_StopWatch_copy/Debug'

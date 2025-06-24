@@ -1,0 +1,7 @@
+../Core/ap/stopWatch.c:17:6:StopWatch_IncTimeCallBack	8	static
+../Core/ap/stopWatch.c:24:6:StopWatch_IncTime	4	static
+../Core/ap/stopWatch.c:53:6:StopWatch_Execute	8	static
+../Core/ap/stopWatch.c:68:6:StopWatch_Stop	8	static
+../Core/ap/stopWatch.c:81:6:StopWatch_Run	8	static
+../Core/ap/stopWatch.c:91:6:StopWatch_Clear	8	static
+../Core/ap/stopWatch.c:102:6:StopWatch_Blink	8	static
