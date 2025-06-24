@@ -6,7 +6,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) //Interrupt 발생�
 {
 	if(htim->Instance ==TIM2) {
 		FND_DisplayDataCallBack();
-
 		TimeWatch_IncTimeCallBack();
 		StopWatch_IncTimeCallBack();
 	}

@@ -28,6 +28,7 @@ Core/ap/src/ap_main.o: ../Core/ap/src/ap_main.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/Button/Button.h \
  ../Core/Inc/GPIO.h ../Core/Inc/main.h \
  C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc/Controller.h \
@@ -64,6 +65,7 @@ C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc/Listener.h
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/Button/Button.h:
 ../Core/Inc/GPIO.h:
 ../Core/Inc/main.h:

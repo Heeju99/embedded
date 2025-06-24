@@ -28,7 +28,9 @@ Core/ap/src/Presenter.o: ../Core/ap/src/Presenter.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/FND_prof/FND_prof.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/FND_prof/FND_prof.h \
+ ../Core/Inc/usart.h ../Core/Inc/main.h
 C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc/Presenter.h:
 C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc/Model_Watch.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -58,4 +60,7 @@ C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/ap/inc/Model_Watc
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 C:/cubespace/250624_TimeWatch_StopWatch_SequenceStructure/Core/driver/FND_prof/FND_prof.h:
+../Core/Inc/usart.h:
+../Core/Inc/main.h:
