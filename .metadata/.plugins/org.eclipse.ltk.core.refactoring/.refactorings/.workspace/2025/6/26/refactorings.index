@@ -10,3 +10,6 @@
 1750735477485	Delete resource '250624_TimeWatch_StopWatch_SequenceStructure/250624_TimeWatch_StopWatch_copy Debug.launch'
 1750735479996	Delete resource '250624_TimeWatch_StopWatch_SequenceStructure/Debug'
 1750735616343	Delete 2 resources
+1750812592837	Delete resource '250625_TimeWatch_StopWatch_UART/250624_TimeWatch_StopWatch_SequenceStructure Debug.launch'
+1750812596392	Delete resource '250625_TimeWatch_StopWatch_UART/Debug'
+1750834461968	Delete resource '250625_TimeWatch_StopWatch_UART/Core/driver/LCD'

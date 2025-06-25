@@ -1,0 +1,36 @@
+#include "Queue.h"
+
+#define QUEUE_SIZE  4 //배열의 길이
+
+int front = 0;
+int rear = 0;
+int Queuedata[QUEUE_SIZE] = {0};
+
+int isQueueFull()
+{
+	return front == ((rear + 1) % QUEUE_SIZE);
+}
+
+int isQueueEmpty()
+{
+	return front == (rear % QUEUE_SIZE);
+}
+
+void EnQueue(int data)
+{
+	if(isQueueFull()){
+		return;
+	}
+	Queuedata[rear] = data;
+	rear = (rear+1) % QUEUE_SIZE;
+}
+
+void DeQueue()
+{
+	if(isQueueEmpty()){
+		return;
+	}
+	int data = Queuedata[front];
+	front = (front+1) % QUEUE_SIZE;
+	return data;
+}

@@ -1,7 +1,9 @@
-12:31:24 **** Build of configuration Debug for project 250619_Button_Led ****
+15:22:38 **** Incremental Build of configuration Debug for project 250619_Button_Led ****
 make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/cubespace/250619_Button_Led/Src/driver/GPIO" -I"C:/cubespace/250619_Button_Led/Src/driver/LedBar" -I"C:/cubespace/250619_Button_Led/Src/driver/SystemClock" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
 make: *** No rule to make target 'Src/driver/Systemclock/Systemclock.o', needed by '250619_Button_Led.elf'.  Stop.
+make: *** Waiting for unfinished jobs....
 "make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-12:31:24 Build Failed. 1 errors, 0 warnings. (took 135ms)
+15:22:39 Build Failed. 2 errors, 0 warnings. (took 441ms)
 

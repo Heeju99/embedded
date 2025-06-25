@@ -1,0 +1,10 @@
+#ifndef DRIVER_LCD_LCD_H_
+#define DRIVER_LCD_LCD_H_
+
+#include "stm32f4xx_hal.h"
+
+void LCD_Init();
+void LCD_backLightOn();
+
+
+#endif /* DRIVER_LCD_LCD_H_ */

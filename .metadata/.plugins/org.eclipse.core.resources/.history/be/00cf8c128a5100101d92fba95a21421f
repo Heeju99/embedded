@@ -1,0 +1,38 @@
+#include "LCD.h"
+
+#define LCD_EN 2
+
+uint8_t LCDData = 0;
+
+void LCD_EN_High()
+{
+	LCDData |= (1<<LCD_EN);
+	LCD_sendI2C(LCDData);
+}
+
+void LCD_EN_Low()
+{
+	LCDData &= ~(1<<LCD_EN);
+	LCD_sendI2C(LCDData);
+}
+
+
+void LCD_SendData(uint8_t data)
+{
+	LCD_EN_High();
+	//상위 4bit
+	LCDData = (data & 0xf0) | (LCDData & 0x0f);
+	LCD_sendI2C(LCDData);
+	LCD_EN_Low();    // E High->LOW 데이터 전송
+	//하위 4bit
+	LCD_EN_High();
+	data = data << 4;
+	LCDData = (data & 0xf0) | (LCDData & 0x0f);
+	LCD_sendI2C(LCDData);
+	LCD_EN_Low();    //E High->LOW 데이터 전송
+}
+
+void LCD_sendI2C(uint8_t data)
+{
+
+}
