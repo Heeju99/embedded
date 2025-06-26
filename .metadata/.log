@@ -1692,3 +1692,518 @@ java.lang.Exception: Resource '/250619_Button_Led/Debug/Src/driver/SystemClock' 
 	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:484)
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-06-26 09:10:33.023 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-06-26 09:10:38.224
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-06-26 09:10:38.226
+!MESSAGE Log4j2 initialized with config file C:\cubespace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-06-26 09:10:46.109
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-26 09:27:46.690
+!MESSAGE Indexed '250626_TimeWatch_StopWatch_LCD_HW' (39 sources, 143 headers) in 2.69 sec: 14,442 declarations; 73,626 references; 5 unresolved inclusions; 1,361 syntax errors; 1,572 unresolved names (1.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-26 10:18:40.529
+!MESSAGE Indexed '250626_TimeWatch_StopWatch_Buzzer' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:12.128
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:12.130
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:12.130
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:12.132
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:21.052
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:21.053
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:21.054
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 10:30:21.054
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY org.eclipse.core.resources 4 2 2025-06-26 10:32:54.441
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment)[368]: java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:32:54.441
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:32:54.441
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 75 2025-06-26 10:32:54.496
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2025-06-26 10:32:54.496
+!MESSAGE Errors running builder 'CDT Builder' on project '250626_TimeWatch_StopWatch_Buzzer'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment)[368]: java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2025-06-26 10:32:54.496
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:32:54.496
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/Segment' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2025-06-26 10:35:24.403
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO)[368]: java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:35:24.403
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:35:24.403
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 75 2025-06-26 10:35:25.529
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2025-06-26 10:35:25.529
+!MESSAGE Errors running builder 'CDT Builder' on project '250626_TimeWatch_StopWatch_Buzzer'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO)[368]: java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2025-06-26 10:35:25.529
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-06-26 10:35:25.529
+!MESSAGE Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/250626_TimeWatch_StopWatch_Buzzer/Debug/Core/driver/GPIO' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.487
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.488
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.488
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.488
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.489
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.489
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.489
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.490
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.490
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.490
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.490
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.491
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.491
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.491
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.492
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 12:32:15.492
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.408
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.408
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.409
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.409
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.410
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.410
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.410
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.411
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.411
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.411
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.412
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.412
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.412
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/FND_prof}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.413
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/GPIO}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.413
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/Segment}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-06-26 14:42:41.413
+!MESSAGE Failed to check relative, returning possibly relative path: C:\cubespace\250626_TimeWatch_StopWatch_Buzzer\Release/"" literal was "${workspace_loc:/${ProjName}/Core/driver/SystemClock}"
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-26 15:13:18.501
+!MESSAGE Indexed '250630_Mini_Project' (44 sources, 179 headers) in 1.77 sec: 17,004 declarations; 82,112 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.24%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-06-26 15:14:58.014
+!MESSAGE Indexed '250630_Mini_Project' (43 sources, 146 headers) in 1.17 sec: 14,371 declarations; 76,814 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.26%)

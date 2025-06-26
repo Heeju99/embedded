@@ -1,0 +1,26 @@
+#include "Buzzer.h"
+
+TIM_HandleTypeDef *hbuzzerTim;
+uint32_t buzzerTimChannel;
+
+
+void Buzzer_Init(TIM_HandleTypeDef *htim, uint32_t channel)
+{
+	hbuzzerTim = htim;
+	buzzerTimChannel = channel;
+}
+
+void Buzzer_SetFreq()
+{
+
+}
+
+void Buzzer_Start()
+{
+
+}
+
+void Buzze_Stop()
+{
+
+}

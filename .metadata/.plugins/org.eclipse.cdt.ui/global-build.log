@@ -1,42 +1,15 @@
-17:01:50 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_UART ****
+15:16:38 **** Incremental Build of configuration Debug for project 250630_Mini_Project ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/driver/LCD/Lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/Button" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/FND_prof" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/LedBar" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap/inc" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap/src" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/driver/LCD/Lcd.d" -MT"Core/driver/LCD/Lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/driver/LCD/Lcd.o"
-../Core/driver/LCD/Lcd.c: In function 'LCD_gotoXY':
-../Core/driver/LCD/Lcd.c:134:13: warning: statement with no effect [-Wunused-value]
-  134 |         col % 16;
-      |         ~~~~^~~~
-../Core/driver/LCD/Lcd.c:135:13: warning: statement with no effect [-Wunused-value]
-  135 |         row % 2;
-      |         ~~~~^~~
-arm-none-eabi-gcc -o "250625_TimeWatch_StopWatch_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250625_TimeWatch_StopWatch_UART\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250625_TimeWatch_StopWatch_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250625_TimeWatch_StopWatch_UART.elf
+arm-none-eabi-gcc "../Core/ap/src/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250630_Mini_Project/Core/ap" -I"C:/cubespace/250630_Mini_Project/Core/driver/Button" -I"C:/cubespace/250630_Mini_Project/Core/driver/LedBar" -I"C:/cubespace/250630_Mini_Project/Core/ap/inc" -I"C:/cubespace/250630_Mini_Project/Core/ap/src" -I"C:/cubespace/250630_Mini_Project/Core/driver/LCD" -I"C:/cubespace/250630_Mini_Project/Core/driver/FND" -I"C:/cubespace/250630_Mini_Project/Core/driver/Buzzer" -I"C:/cubespace/250630_Mini_Project/Core/driver/Motor" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/ap_main.d" -MT"Core/ap/src/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/ap_main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250630_Mini_Project/Core/ap" -I"C:/cubespace/250630_Mini_Project/Core/driver/Button" -I"C:/cubespace/250630_Mini_Project/Core/driver/LedBar" -I"C:/cubespace/250630_Mini_Project/Core/ap/inc" -I"C:/cubespace/250630_Mini_Project/Core/ap/src" -I"C:/cubespace/250630_Mini_Project/Core/driver/LCD" -I"C:/cubespace/250630_Mini_Project/Core/driver/FND" -I"C:/cubespace/250630_Mini_Project/Core/driver/Buzzer" -I"C:/cubespace/250630_Mini_Project/Core/driver/Motor" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "250630_Mini_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250630_Mini_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250630_Mini_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250630_Mini_Project.elf
  
-arm-none-eabi-size  250625_TimeWatch_StopWatch_UART.elf 
-arm-none-eabi-objdump -h -S 250625_TimeWatch_StopWatch_UART.elf  > "250625_TimeWatch_StopWatch_UART.list"
+arm-none-eabi-size  250630_Mini_Project.elf 
+arm-none-eabi-objdump -h -S 250630_Mini_Project.elf  > "250630_Mini_Project.list"
    text	   data	    bss	    dec	    hex	filename
-  23148	    212	   2228	  25588	   63f4	250625_TimeWatch_StopWatch_UART.elf
+  21376	    124	   2044	  23544	   5bf8	250630_Mini_Project.elf
 Finished building: default.size.stdout
  
-Finished building: 250625_TimeWatch_StopWatch_UART.list
- 
-17:01:55 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_UART ****
-make -j16 all 
-arm-none-eabi-size  250625_TimeWatch_StopWatch_UART.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23148	    212	   2228	  25588	   63f4	250625_TimeWatch_StopWatch_UART.elf
-Finished building: default.size.stdout
- 
-17:02:54 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_UART ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/ap/src/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/Button" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/FND_prof" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/LedBar" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap/inc" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/ap/src" -I"C:/cubespace/250625_TimeWatch_StopWatch_UART/Core/driver/LCD" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/Presenter.d" -MT"Core/ap/src/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/Presenter.o"
-arm-none-eabi-gcc -o "250625_TimeWatch_StopWatch_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250625_TimeWatch_StopWatch_UART\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250625_TimeWatch_StopWatch_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250625_TimeWatch_StopWatch_UART.elf
- 
-arm-none-eabi-size  250625_TimeWatch_StopWatch_UART.elf 
-arm-none-eabi-objdump -h -S 250625_TimeWatch_StopWatch_UART.elf  > "250625_TimeWatch_StopWatch_UART.list"
-   text	   data	    bss	    dec	    hex	filename
-  23164	    212	   2228	  25604	   6404	250625_TimeWatch_StopWatch_UART.elf
-Finished building: default.size.stdout
- 
-Finished building: 250625_TimeWatch_StopWatch_UART.list
+Finished building: 250630_Mini_Project.list
  

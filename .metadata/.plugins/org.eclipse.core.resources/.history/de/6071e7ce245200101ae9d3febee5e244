@@ -1,0 +1,16 @@
+#ifndef AP_PRESENTER_H_
+#define AP_PRESENTER_H_
+
+#include "Model_Watch.h"
+#include "FND_prof.h"
+#include "Lcd.h"
+
+
+
+void Presenter_Init();
+void Presenter_Excute();
+void Presenter_outData(watch_t watchData);
+void Presenter_LCD_TimeWatch(watch_t watchData);
+void Presenter_LCD_StopWatch(watch_t watchData);
+
+#endif /* AP_PRESENTER_H_ */

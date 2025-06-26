@@ -1,0 +1,4 @@
+../Core/driver/Motor/Motor.c:6:6:Motor_Init	1
+../Core/driver/Motor/Motor.c:13:6:Motor_SetFreq	3
+../Core/driver/Motor/Motor.c:22:6:Motor_Start	1
+../Core/driver/Motor/Motor.c:27:6:Motor_Stop	1

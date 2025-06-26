@@ -1,0 +1,37 @@
+#include "Sound.h"
+
+void Sound_Init()
+{
+	Buzzer_Init(&htim3, TIM_CHANNEL_1);
+}
+
+void Sound_PowerOn()
+{
+	Buzzer_SetFreq(523); //do
+	Buzzer_Start();
+	HAL_Delay(200);
+	Buzzer_SetFreq(659); //mi
+	HAL_Delay(200);
+	Buzzer_SetFreq(784); //sol
+	HAL_Delay(200);
+	Buzzer_SetFreq(1047); //sol
+	HAL_Delay(200);
+	Buzzer_Stop();
+}
+
+void Sound_PowerOff()
+{
+	Buzzer_SetFreq(523);
+	Buzzer_Start();
+	HAL_Delay(200);
+}
+
+void Sound_ChangeMode()
+{
+
+}
+
+void Sound_Alarm()
+{
+
+}

@@ -1,0 +1,21 @@
+#include "Sound.h"
+
+void Sound_PowerOn()
+{
+
+}
+
+void Sound_PowerOff()
+{
+
+}
+
+void Sound_ChangeMode()
+{
+
+}
+
+void Sound_Alarm()
+{
+
+}
