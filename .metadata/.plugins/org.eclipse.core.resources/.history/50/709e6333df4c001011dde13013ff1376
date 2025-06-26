@@ -1,7 +1,0 @@
-#include <stdint.h>
-#include "GPIO.h"
-#include "SystemClock.h"
-
-void FND_Init(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
-
-#endif /* DRIVER_FND_FND_H_ */

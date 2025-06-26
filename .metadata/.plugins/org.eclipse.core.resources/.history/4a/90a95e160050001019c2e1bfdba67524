@@ -1,6 +1,0 @@
-#include "timWatch.h"
-
-void TimeWatch_Excute()
-{
-
-}

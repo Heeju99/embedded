@@ -1,3 +1,0 @@
-../Core/ap/src/Controller.c:10:6:Controller_SetInputData	16	static
-../Core/ap/src/Controller.c:28:6:Controller_Execute	8	static
-../Core/ap/src/Controller.c:33:6:Controller_Mode	8	static

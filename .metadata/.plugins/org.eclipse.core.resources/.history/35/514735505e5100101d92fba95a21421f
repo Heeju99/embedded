@@ -1,4 +1,0 @@
-../Core/ap/src/Listener.c:7:6:Listener_Init	1
-../Core/ap/src/Listener.c:14:6:Listener_Execute	1
-../Core/ap/src/Listener.c:20:6:Listener_CheckButton	4
-../Core/ap/src/Listener.c:41:6:Listener_CheckUART	6

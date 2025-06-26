@@ -1,6 +1,0 @@
-../Core/ap/src/Sound.c:3:6:Sound_Init	1
-../Core/ap/src/Sound.c:8:6:Sound_PowerOn	1
-../Core/ap/src/Sound.c:22:6:Sound_PowerOff	1
-../Core/ap/src/Sound.c:36:6:Sound_Squid	1
-../Core/ap/src/Sound.c:62:6:Sound_ChangeMode	1
-../Core/ap/src/Sound.c:67:6:Sound_Alarm	1

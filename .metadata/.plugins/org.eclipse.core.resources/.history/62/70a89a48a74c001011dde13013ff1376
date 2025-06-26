@@ -1,9 +1,0 @@
-#include "Systemclock.h"
-
-void Systemclock_init()
-{
-	RCC-> AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-	RCC-> AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
-	RCC-> AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
-}
-

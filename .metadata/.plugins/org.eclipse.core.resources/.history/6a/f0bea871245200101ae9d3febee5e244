@@ -1,6 +1,0 @@
-../Core/ap/src/Queue.c:3:6:Queue_Init	16	static
-../Core/ap/src/Queue.c:10:5:isQueueFull	16	static
-../Core/ap/src/Queue.c:15:5:isQueueEmpty	16	static
-../Core/ap/src/Queue.c:20:6:EnQueue	16	static
-../Core/ap/src/Queue.c:29:5:DeQueue	24	static
-../Core/ap/src/Queue.c:40:5:peekQueue	16	static
