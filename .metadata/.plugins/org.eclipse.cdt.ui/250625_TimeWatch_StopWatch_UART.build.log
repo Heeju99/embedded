@@ -1,4 +1,4 @@
-14:30:22 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_UART ****
+16:49:39 **** Incremental Build of configuration Debug for project 250625_TimeWatch_StopWatch_UART ****
 make -j16 all 
 arm-none-eabi-size  250625_TimeWatch_StopWatch_UART.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250625_TimeWatch_StopWatch_UART.elf
 Finished building: default.size.stdout
  
 
-14:30:23 Build Finished. 0 errors, 0 warnings. (took 245ms)
+16:49:40 Build Finished. 0 errors, 0 warnings. (took 442ms)
 

@@ -1,0 +1,57 @@
+#include "Security.h"
+
+extern inputData_TypeDef controlData;
+
+static securityState_t securityState = STOP;
+static safe_t safetype = {SECURITY, 0, 0, 0};
+
+void Security_RunCallBack()
+{
+
+}
+
+void Security_Exexcute()
+{
+	if (controlData.id == SECURITY_RUN) {
+		controlData.id = NO_SEC_CON;
+	}
+
+}
+
+void StopWatch_IncTimeCallBack()
+{
+	if (stopWatchState == RUN) {
+		StopWatch_IncTime();
+	}
+	LCD_writeStringXY(0,0, "");
+	Presenter_OutData(safetype);
+}
+
+
+
+void StopWatch_Run()
+{
+	if (controlData.id == STOPWATCH_RUN_STOP) {
+		controlData.id = NO_CONTROL;
+		stopWatchState = STOP;
+	}
+
+//	FND_WriteData((stopWatch.min % 10 * 1000) + (stopWatch.sec * 10) + (stopWatch.msec/100));
+//
+//	FND_WriteDp(FND_DP_100|FND_DP_1, FND_DP_OFF);
+//
+//	if (stopWatch.msec%100 < 50) {
+//		FND_WriteDp(FND_DP_10, FND_DP_ON);
+//	}
+//	else {
+//		FND_WriteDp(FND_DP_10, FND_DP_OFF);
+//	}
+//
+//	if (stopWatch.msec < 500) {
+//		FND_WriteDp(FND_DP_1000, FND_DP_ON);
+//	}
+//	else {
+//		FND_WriteDp(FND_DP_1000, FND_DP_OFF);
+//	}
+}
+

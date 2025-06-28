@@ -34,10 +34,13 @@ Core/ap/src/timeWatch.o: ../Core/ap/src/timeWatch.c \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/Controller.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/stopWatch.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/Presenter.h \
+ C:/cubespace/250630_Mini_Project/Core/ap/inc/Model_mode.h \
  C:/cubespace/250630_Mini_Project/Core/driver/FND/FND.h \
  C:/cubespace/250630_Mini_Project/Core/driver/LCD/lcd.h ../Core/Inc/i2c.h \
  ../Core/Inc/main.h \
  C:/cubespace/250630_Mini_Project/Core/driver/LedBar/LedBar.h \
+ C:/cubespace/250630_Mini_Project/Core/driver/Buzzer/Buzzer.h \
+ ../Core/Inc/tim.h C:/cubespace/250630_Mini_Project/Core/ap/inc/Sound.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/timeWatch.h
 C:/cubespace/250630_Mini_Project/Core/ap/inc/timeWatch.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -74,9 +77,13 @@ C:/cubespace/250630_Mini_Project/Core/ap/inc/Model_Watch.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/Controller.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/stopWatch.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/Presenter.h:
+C:/cubespace/250630_Mini_Project/Core/ap/inc/Model_mode.h:
 C:/cubespace/250630_Mini_Project/Core/driver/FND/FND.h:
 C:/cubespace/250630_Mini_Project/Core/driver/LCD/lcd.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/main.h:
 C:/cubespace/250630_Mini_Project/Core/driver/LedBar/LedBar.h:
+C:/cubespace/250630_Mini_Project/Core/driver/Buzzer/Buzzer.h:
+../Core/Inc/tim.h:
+C:/cubespace/250630_Mini_Project/Core/ap/inc/Sound.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/timeWatch.h:

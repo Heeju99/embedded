@@ -1,0 +1,54 @@
+#include "Ultra.h"
+
+#define UL_TRIGGER 5
+#define UL_ECHO  7
+
+static uint8_t UltraData = 0;
+uint32_t count = 0;
+uint16_t distance = 0;
+
+
+
+//void Ultra_Init()
+//{
+//
+//}
+
+
+void Ultra_Trigger_Input()
+{
+	Ultra_High();
+	Delay_us(10);
+	Ultra_Low();
+
+}
+
+void Ultra_High()
+{
+	HAL_GPIO_WritePin(GPIOA, UL_TRIGGER, SET);
+}
+
+void Ultra_Low()
+{
+	HAL_GPIO_WritePin(GPIOA, UL_TRIGGER, RESET);
+}
+
+
+uint32_t Ultra_Echo()
+{
+	while(HAL_GPIO_ReadPin(GPIOA, UL_ECHO) == 1)
+	{
+		count++;
+		Delay_us(1);
+	}
+	return count;
+}
+
+uint16_t Ultra_Calculate(uint32_t count)
+{
+	if(count != 0){
+		distance = count /58;
+		return distance;
+	}
+	else return 0;
+}

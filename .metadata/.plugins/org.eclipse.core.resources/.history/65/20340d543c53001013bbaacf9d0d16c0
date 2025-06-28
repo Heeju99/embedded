@@ -1,0 +1,117 @@
+#include "Sound.h"
+
+#define HALF 10000
+
+static void Sound_Delay(uint32_t half);
+
+void Sound_Init()
+{
+	Buzzer_Init(&htim3, TIM_CHANNEL_1);
+}
+
+typedef enum {
+	SOUND_WARN_IDLE,
+	SOUND_WARN_ON,
+	SOUND_WARN_OFF
+} SoundWarnState;
+
+static SoundWarnState warnState = SOUND_WARN_IDLE;
+static uint32_t warnPrevTick = 0;
+
+void Sound_WarningCallBack()
+{
+	uint32_t curTick = HAL_GetTick();
+
+	switch (warnState)
+	{
+	case SOUND_WARN_IDLE:
+		warnState = SOUND_WARN_ON;
+		break;
+
+	case SOUND_WARN_ON:
+		Buzzer_SetFreq(1319);
+		Buzzer_Start();
+		warnPrevTick = curTick;
+		warnState = SOUND_WARN_OFF;
+		break;
+
+	case SOUND_WARN_OFF:
+		if (curTick - warnPrevTick >= 500) // 500ms ON
+		{
+			Buzzer_Stop();
+			warnPrevTick = curTick;
+			warnState = SOUND_WARN_ON; // 반복
+		}
+		break;
+	}
+}
+
+
+void Sound_Warning()
+{
+	Buzzer_SetFreq(1319); //mi
+	Buzzer_Start();
+	Sound_Delay(HALF);
+	Buzzer_Stop();
+}
+
+void Sound_PowerOn()
+{
+	Buzzer_SetFreq(1047); //do
+	Buzzer_Start();
+
+	Buzzer_SetFreq(1319); //mi
+	Buzzer_SetFreq(1568); //sol
+	Buzzer_SetFreq(2039); //do
+	Buzzer_Stop();
+}
+
+void Sound_PowerOff()
+{
+	Buzzer_SetFreq(2039); //do
+	Buzzer_Start();
+	HAL_Delay(200);
+	Buzzer_SetFreq(1568); //mi
+	HAL_Delay(200);
+	Buzzer_SetFreq(1319); //sol
+	HAL_Delay(200);
+	Buzzer_SetFreq(1047); //do
+	HAL_Delay(200);
+	Buzzer_Stop();
+}
+
+void Sound_Squid()
+{
+	Buzzer_Start();
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(784); //sol
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(659); //mi
+	HAL_Delay(500);
+	Buzzer_SetFreq(659); //mi
+	HAL_Delay(500);
+	Buzzer_SetFreq(784); //sol
+	HAL_Delay(500);
+	Buzzer_Stop();
+}
+
+
+void Sound_Delay(uint32_t half)
+{
+	static uint32_t counter = 0;
+	counter++;
+	if (counter > HALF) return;
+	counter = 0;
+}
+
+

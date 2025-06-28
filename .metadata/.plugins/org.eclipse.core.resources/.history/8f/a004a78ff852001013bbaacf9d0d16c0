@@ -1,0 +1,6 @@
+#include "UltraRun.h"
+
+void UltraRun_PowerOn()
+{
+	Ultra_Trigger_Input();
+}

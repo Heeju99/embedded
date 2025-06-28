@@ -7,13 +7,13 @@
 #include "Controller.h"
 
 
-typedef enum {S_TIME_WATCH, S_STOP_WATCH} watchModeState_t;
+typedef enum {S_LOG_IN, S_SECURITY} safeModeState_t;
 
 void Controller_Mode();
 
-
-inputData_TypeDef controlData = {0};
-static watchModeState_t modeState = TIME_WATCH;
+stateControl_t stateData = {0};
+inputData_TypeDef controlData = {};
+static safeModeState_t modeState = S_LOG_IN;
 
 void Controller_Excute()
 {
@@ -26,33 +26,34 @@ void Controller_SetInputData(inputData_TypeDef inputData)
 		controlData.id = MODE;
 		controlData.data = MODE_ACT;
 	}
-	else if (inputData.id == STOPWATCH_RUN_STOP) {
-		controlData.id = STOPWATCH_RUN_STOP;
-		controlData.data = STOPWATCH_ACT;
-	}
-	else if (inputData.id == STOPWATCH_CLEAR) {
-		controlData.id = STOPWATCH_CLEAR;
-		controlData.data = STOPWATCH_ACT;
-	}
 }
+
 
 void Controller_Mode()
 {
 	switch(modeState)
 	{
-	case S_TIME_WATCH:
+	case S_LOG_IN:
 		if (controlData.id == MODE) {
 			controlData.id = NO_CONTROL;
-			modeState = S_STOP_WATCH;
+			modeState = S_SECURITY;
+			stateData.state = P_LOG;
+
+			 Presenter_UL_StateData(stateData);
 		}
-		TimeWatch_Excute();
+		//Log_in_Excute();
 		break;
-	case S_STOP_WATCH:
+
+	case S_SECURITY:
 		if (controlData.id == MODE) {
 			controlData.id = NO_CONTROL;
-			modeState = S_TIME_WATCH;
+			modeState = S_LOG_IN;
+			stateData.state = P_SEC;
+
+			Presenter_UL_StateData(stateData);
 		}
-		StopWatch_Excute();
+		Security_Excute();
 		break;
+
 	}
 }

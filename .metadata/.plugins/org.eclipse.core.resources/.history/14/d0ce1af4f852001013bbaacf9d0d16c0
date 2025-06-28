@@ -1,0 +1,13 @@
+#include "UltraRun.h"
+
+uint32_t counter = 0;
+
+void Ultra_RunCallBack()
+{
+	counter++;
+	if (counter > 3000000) //3sec
+	{
+		counter = 0;
+		Ultra_Trigger_Input();
+	}
+}

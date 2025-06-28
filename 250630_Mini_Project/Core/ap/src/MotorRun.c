@@ -12,5 +12,3 @@ void MotorRUN_PowerOn()
 	HAL_Delay(10000);
 	Motor_Stop();
 }
-
-

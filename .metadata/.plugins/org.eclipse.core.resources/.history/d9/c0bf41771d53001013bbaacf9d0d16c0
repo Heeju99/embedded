@@ -1,0 +1,18 @@
+#include "UltraRun.h"
+
+ultra_t ultra = {0, 0};
+
+void Ultra_RunCallBack()
+{
+	static uint32_t counter = 0;
+	counter++;
+	if (counter > 30000) //3sec
+	{
+		counter = 0;
+		Ultra_Trigger_Input();
+        uint32_t echoTime = Ultra_Echo();
+        uint16_t distance = Ultra_Calculate(echoTime);
+
+        ultra.ultra_data = distance;
+	}
+}

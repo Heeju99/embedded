@@ -8,6 +8,7 @@
 #include "Presenter.h"
 #include "Sound.h"
 #include "MotorRun.h"
+#include "UltraRun.h"
 
 int ap_main();
 void ap_init();

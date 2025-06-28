@@ -1,0 +1,24 @@
+/*
+ * Model_mode.h
+ *
+ *  Created on: Jun 27, 2025
+ *      Author: kccistc
+ */
+
+#ifndef AP_INC_MODEL_MODE_H_
+#define AP_INC_MODEL_MODE_H_
+
+#include "stm32f4xx_hal.h"
+
+enum {LOG_IN, SECURITY};
+
+typedef struct {
+	uint8_t id;
+   int state;
+   int secret_num_data;
+   int ultra_data;
+}safe_TypeDef;
+
+
+
+#endif /* AP_INC_MODEL_MODE_H_ */

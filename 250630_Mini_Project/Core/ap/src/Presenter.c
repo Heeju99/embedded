@@ -8,6 +8,12 @@
 #include <string.h>
 #include <stdio.h>
 #include "usart.h"
+#include "Ultra.h"
+
+//additional
+#include "UltraRun.h"
+
+#define HALF 5000
 
 static void Presenter_DispTimeWatch(watch_t watchData);
 static void Presenter_DispStopWatch(watch_t watchData);
@@ -16,18 +22,111 @@ static void Presenter_DispFndStopWatch(watch_t watchData);
 static void Presenter_DispMonitorTimeWatch(watch_t watchData);
 static void Presenter_DispMonitorStopWatch(watch_t watchData);
 
+static void Presenter_UL_WarningLED_ON();
+static void Presenter_UL_WarningLED_OFF();
+static void Presenter_UL_LoginLED_ON();
+static void Presenter_UL_LoginLED_OFF();
 
 static watch_t dispData = {TIME_WATCH, 12, 0, 0, 0};
+
+static stateControl_t ultraState1;
+
+static ultra_t ultraData;
+
 
 void Presenter_Init()
 {
 	LCD_Init(&hi2c1);
+	Buzzer_Init(&htim3, TIM_CHANNEL_1);
 }
 
 void Presenter_OutData(watch_t watchData)
 {
 	memcpy(&dispData, &watchData, sizeof(watch_t));
 }
+
+
+
+///additional //////////////////////////////////
+
+void Presenter_UL_StateData()
+{
+	memcpy(&ultraState1, &stateData, sizeof(stateControl_t));
+}
+
+
+void Presenter_UL_OutData(ultra_t ultraDst)
+{
+	memcpy(&ultraData, &ultraDst, sizeof(ultra_t));
+}
+
+//UL
+void Presenter_UL_Detected() //ultra_t ultraDst
+{
+
+		char str[50];
+		sprintf(str,"!!Safe is not Safe!! \n");
+		HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), 1000);
+
+}
+
+void Presenter_UL_NotDetected() //ultra_t ultraDst
+{
+		char str[50];
+		sprintf(str,"Distance : %03d cm\n", ultraData.ultra_data);
+		HAL_UART_Transmit(&huart2, (uint8_t *)str, strlen(str), 1000);
+}
+
+
+void Presenter_UL_WarningLED_ON()
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);
+	HAL_Delay(1);
+}
+
+void Presenter_UL_WarningLED_OFF()
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET);
+	HAL_Delay(1);
+}
+
+void Presenter_UL_LoginLED_ON()
+{
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+	HAL_Delay(1);
+}
+
+void Presenter_UL_LoginLED_OFF()
+{
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+	HAL_Delay(1);
+}
+
+void Presenter_UL_Excute()
+{
+	if(ultraState1.state == P_SEC){
+		Presenter_UL_LoginLED_OFF();
+		if(ultraData.ultra_data < 4){
+			Presenter_UL_WarningLED_ON();
+			Presenter_UL_WarningLED_OFF();
+			//Presenter_UL_LoginLED_ON();
+			//Presenter_UL_LoginLED_OFF();
+			Sound_Warning();
+			Presenter_UL_Detected();
+		}
+		else {
+			Presenter_UL_NotDetected();
+		}
+	}
+	else
+		Presenter_UL_LoginLED_ON();
+
+}
+
+
+////////////////////////////////////////
+
+
 
 void Presenter_Excute()
 {
@@ -38,6 +137,8 @@ void Presenter_Excute()
 		Presenter_DispStopWatch(dispData);
 	}
 }
+
+
 
 void Presenter_DispTimeWatch(watch_t watchData)
 {

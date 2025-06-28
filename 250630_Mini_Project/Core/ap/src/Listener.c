@@ -1,11 +1,3 @@
-/*
- * Listener.c
- *
- *  Created on: Jun 24, 2025
- *      Author: rhoblack
- */
-
-
 #include "Listener.h"
 #include "usart.h"
 
@@ -18,8 +10,8 @@ static Que_TypeDef uartRxQue;
 void Listener_Init()
 {
 	Button_Init(&hBtnMode, GPIOB, GPIO_PIN_5);
-	Button_Init(&hBtnRunStop, GPIOB, GPIO_PIN_3);
-	Button_Init(&hBtnClear, GPIOA, GPIO_PIN_10);
+	//Button_Init(&hBtnRunStop, GPIOB, GPIO_PIN_3);
+	//Button_Init(&hBtnClear, GPIOA, GPIO_PIN_10);
 
 	Que_Init(&uartRxQue);
 	HAL_UART_Receive_IT(&huart2, &rcvData, 1); // uart recv interrupt enable
@@ -47,16 +39,7 @@ void Listener_CheckButton()
 		inputData.data = MODE_ACT;
 		Controller_SetInputData(inputData);
 	}
-	else if (Button_GetState(&hBtnRunStop) == ACT_PUSHED) {
-		inputData.id = STOPWATCH_RUN_STOP;
-		inputData.data = STOPWATCH_ACT;
-		Controller_SetInputData(inputData);
-	}
-	else if (Button_GetState(&hBtnClear) == ACT_PUSHED) {
-		inputData.id = STOPWATCH_CLEAR;
-		inputData.data = STOPWATCH_ACT;
-		Controller_SetInputData(inputData);
-	}
+
 }
 
 void Listener_CheckUart()
@@ -73,21 +56,21 @@ void Listener_CheckUart()
 		inputData.data = MODE_ACT;
 		Controller_SetInputData(inputData);
 	}
-	else if (uartRxData == 'r') {
-		inputData.id = STOPWATCH_RUN_STOP;
-		inputData.data = STOPWATCH_ACT;
-		Controller_SetInputData(inputData);
-	}
-	else if (uartRxData == 's') {
-		inputData.id = STOPWATCH_RUN_STOP;
-		inputData.data = STOPWATCH_ACT;
-		Controller_SetInputData(inputData);
-	}
-	else if (uartRxData == 'c') {
-		inputData.id = STOPWATCH_CLEAR;
-		inputData.data = STOPWATCH_ACT;
-		Controller_SetInputData(inputData);
-	}
+	//else if (uartRxData == 'r') {
+	//	inputData.id = STOPWATCH_RUN_STOP;
+	//	inputData.data = STOPWATCH_ACT;
+	//	Controller_SetInputData(inputData);
+	//}
+	//else if (uartRxData == 's') {
+	//	inputData.id = STOPWATCH_RUN_STOP;
+	//	inputData.data = STOPWATCH_ACT;
+	//	Controller_SetInputData(inputData);
+	//}
+	//else if (uartRxData == 'c') {
+	//	inputData.id = STOPWATCH_CLEAR;
+	//	inputData.data = STOPWATCH_ACT;
+	//	Controller_SetInputData(inputData);
+	//}
 }
 
 void Listener_UartCallBack()

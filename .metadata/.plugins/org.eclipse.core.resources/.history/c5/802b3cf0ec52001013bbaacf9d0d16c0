@@ -1,0 +1,13 @@
+#include "UltraRun.h"
+
+void MotorRun_Init()
+{
+	Motor_Init(&htim1, TIM_CHANNEL_1);
+}
+
+void UltraRun_PowerOn()
+{
+	Ultra_Trigger_Input();
+}
+
+

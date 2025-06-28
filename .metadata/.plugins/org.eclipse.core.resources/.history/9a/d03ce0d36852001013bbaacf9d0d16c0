@@ -1,0 +1,19 @@
+#include "Ultra.h"
+
+#define
+
+void Ultra_Init()
+{
+	if()
+}
+
+void Ultra_Start()
+{
+
+}
+
+void Ultra_Trigger_Input()
+{
+	Pin_Trigger |= (1 << UL_PIN);
+	HAL_Delay()
+}

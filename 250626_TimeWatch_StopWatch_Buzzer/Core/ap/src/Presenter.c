@@ -52,7 +52,6 @@ void Presenter_DispStopWatch(watch_t watchData)
 }
 
 
-
 void Presenter_DispFndTimeWatch(watch_t watchData)
 {
 	FND_WriteData(watchData.hour*100 + watchData.min);

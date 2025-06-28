@@ -31,5 +31,6 @@ Core/driver/FND \
 Core/driver/LCD \
 Core/driver/LedBar \
 Core/driver/Motor \
+Core/driver/Ultra \
 Drivers/STM32F4xx_HAL_Driver/Src \
 

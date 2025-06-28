@@ -1,0 +1,67 @@
+#include "Sound.h"
+
+void Sound_Init()
+{
+	Buzzer_Init(&htim3, TIM_CHANNEL_1);
+}
+ HAL_Delay(100) ->
+
+void Sound_Warning_callback()
+{
+	Buzzer_SetFreq(670); //do
+	Buzzer_Start();
+	Buzzer_SetFreq(1397); //mi
+	Buzzer_SetFreq(670); //do
+	Buzzer_SetFreq(1397); //mi
+	Buzzer_Stop();
+}
+
+void Sound_PowerOn()
+{
+	Buzzer_SetFreq(1047); //do
+	Buzzer_Start();
+
+	Buzzer_SetFreq(1319); //mi
+	Buzzer_SetFreq(1568); //sol
+	Buzzer_SetFreq(2039); //do
+	Buzzer_Stop();
+}
+
+void Sound_PowerOff()
+{
+	Buzzer_SetFreq(2039); //do
+	Buzzer_Start();
+	HAL_Delay(200);
+	Buzzer_SetFreq(1568); //mi
+	HAL_Delay(200);
+	Buzzer_SetFreq(1319); //sol
+	HAL_Delay(200);
+	Buzzer_SetFreq(1047); //do
+	HAL_Delay(200);
+	Buzzer_Stop();
+}
+
+void Sound_Squid()
+{
+	Buzzer_Start();
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(784); //sol
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(880); //la
+	HAL_Delay(500);
+	Buzzer_SetFreq(659); //mi
+	HAL_Delay(500);
+	Buzzer_SetFreq(659); //mi
+	HAL_Delay(500);
+	Buzzer_SetFreq(784); //sol
+	HAL_Delay(500);
+	Buzzer_Stop();
+}

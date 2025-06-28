@@ -1,0 +1,62 @@
+#include "Security.h"
+
+extern inputData_TypeDef controlData;
+
+static ultra_t ultra = {0};
+
+uint16_t Security_RunCallBack()
+{
+	 uint32_t count = 0;
+	 uint16_t distance = 0;
+
+	 while(HAL_GPIO_ReadPin(GPIOA, UL_ECHO) == 1)
+	   {
+	        count++;
+	        Delay_us(1);  // 1us 단위 지연
+	    }
+
+	    // 거리 계산 (count / 58 = cm)
+	    if (count != 0)
+	    {
+	        distance = count / 58;
+	    }
+
+	    return distance;  // 단위: cm
+
+}
+
+void Security_Exexcute()
+{
+	if (controlData.id == SECURITY_RUN) {
+		controlData.id = NO_SEC_CON;
+	}
+		if()
+		Presenter_OutData(safetype);
+}
+
+void StopWatch_Excute()
+{
+	switch (securityState)
+	{
+	case RUN:
+		Security_Run();
+		break;
+
+	case WARNING:
+		Security_Warning();
+		break;
+	}
+	Presenter_OutData(ultra);
+}
+
+void Security_Run()
+{
+	if (controlData.id == STOPWATCH_RUN_STOP) {
+		securityState = WARNING;
+	}
+}
+
+void Security_Warning()
+{
+	flag = 1;
+}
