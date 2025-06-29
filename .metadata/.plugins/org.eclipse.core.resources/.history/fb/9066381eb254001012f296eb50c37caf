@@ -1,0 +1,116 @@
+#include "login.h"
+#include "Model_mode.h"
+#include "Controller.h"
+#include "usart.h"
+
+//
+//typedef struct{
+//   uint8_t login_state;
+//}stateControl_login_t;
+//enum {WAIT_INPUT,ING_INPUT, OPEN, FAIL}
+
+stateControl_login_t login_stateData = {0};
+watch_t stopWatch;
+login_input_TypeDef login_controldata;
+static uint32_t openStartTick = 0;
+int password_input;
+bool is_timeout(uint32_t *startTick, uint32_t interval_ms);
+
+
+static void wait_input();
+static void input_ING();
+static void Login_Open();
+static void Login_Fail();
+static void SAFE_IncTime();
+
+
+void safe_IncTimeCallBack()
+{
+   if (login_stateData.login_state == ING_INPUT) {
+      SAFE_IncTime();
+   }
+}
+
+void SAFE_IncTime()
+{
+   if (stopWatch.msec < 1000-1) {
+      stopWatch.msec++;
+      return;
+   }
+   stopWatch.msec = 0;
+}
+
+void Login_Execute()
+{
+
+   switch (login_stateData.login_state) {
+   case WAIT_INPUT:   wait_input();   break;
+   case ING_INPUT:   input_ING();   break;
+   case OPEN:     Login_Open();    break;
+   case FAIL:     Login_Fail();    break;
+   }
+}
+
+void wait_input(void)
+{
+
+    char msg1[50];
+	    sprintf(msg1,"WAIT_INPUT STATE\n");
+	    HAL_UART_Transmit(&huart2, (uint8_t*)msg1, strlen(msg1),1000);
+   //   controlData.id_safe = WAIT_INPUT;
+   if(login_controldata.data_pw_input)
+   {
+      login_stateData.login_state = ING_INPUT;
+
+   }
+}
+
+void input_ING(void)
+{
+   if(login_controldata.data_pw_correct == 1)   login_stateData.login_state = OPEN;
+   else if (login_controldata.data_pw_correct == 2) login_stateData.login_state = FAIL;
+
+}
+
+void Login_Open(void)
+{
+
+//    char msg1[50];
+//    sprintf(msg1,"success Opening\n");
+//    HAL_UART_Transmit(&huart2, (uint8_t*)msg1, strlen(msg1),1000);
+   //if (is_timeout(&openStartTick, 60000U)) {
+	HAL_Delay(1000);
+      login_stateData.login_state = WAIT_INPUT;
+   //}
+}
+
+void Login_Fail(void)
+{
+//       char msg1[50];
+//       sprintf(msg1,"fail Opening\n");
+//       HAL_UART_Transmit(&huart2, (uint8_t*)msg1, strlen(msg1),1000);
+   HAL_Delay(3000);
+   login_stateData.login_state= WAIT_INPUT;
+}
+
+////////////////////////////////////
+
+bool is_timeout(uint32_t *startTick, uint32_t interval_ms)
+{
+   uint32_t now = HAL_GetTick();
+
+   if (*startTick == 0) {
+      *startTick = now;
+      return false;
+   }
+
+   if ((now - *startTick) >= interval_ms) {
+      *startTick = 0;
+      return true;
+   }
+
+   return false;
+}
+
+
+

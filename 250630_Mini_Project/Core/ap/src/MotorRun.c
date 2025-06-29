@@ -9,6 +9,6 @@ void MotorRUN_PowerOn()
 {
 	Motor_SetFreq(100); //do
 	Motor_Start();
-	HAL_Delay(10000);
+	HAL_Delay(1000); //1sec
 	Motor_Stop();
 }

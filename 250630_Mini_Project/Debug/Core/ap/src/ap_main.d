@@ -42,11 +42,12 @@ Core/ap/src/ap_main.o: ../Core/ap/src/ap_main.c \
  C:/cubespace/250630_Mini_Project/Core/driver/LedBar/LedBar.h \
  C:/cubespace/250630_Mini_Project/Core/driver/Buzzer/Buzzer.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/Sound.h \
+ C:/cubespace/250630_Mini_Project/Core/ap/inc/Login.h \
+ C:/cubespace/250630_Mini_Project/Core/ap/inc/MotorRun.h \
+ C:/cubespace/250630_Mini_Project/Core/driver/Motor/Motor.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/timeWatch.h \
  C:/cubespace/250630_Mini_Project/Core/driver/Button/Button.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/queue.h \
- C:/cubespace/250630_Mini_Project/Core/ap/inc/MotorRun.h \
- C:/cubespace/250630_Mini_Project/Core/driver/Motor/Motor.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/UltraRun.h \
  C:/cubespace/250630_Mini_Project/Core/driver/Ultra/Ultra.h \
  C:/cubespace/250630_Mini_Project/Core/ap/inc/Model_mode.h
@@ -95,11 +96,12 @@ C:/cubespace/250630_Mini_Project/Core/driver/LCD/lcd.h:
 C:/cubespace/250630_Mini_Project/Core/driver/LedBar/LedBar.h:
 C:/cubespace/250630_Mini_Project/Core/driver/Buzzer/Buzzer.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/Sound.h:
+C:/cubespace/250630_Mini_Project/Core/ap/inc/Login.h:
+C:/cubespace/250630_Mini_Project/Core/ap/inc/MotorRun.h:
+C:/cubespace/250630_Mini_Project/Core/driver/Motor/Motor.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/timeWatch.h:
 C:/cubespace/250630_Mini_Project/Core/driver/Button/Button.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/queue.h:
-C:/cubespace/250630_Mini_Project/Core/ap/inc/MotorRun.h:
-C:/cubespace/250630_Mini_Project/Core/driver/Motor/Motor.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/UltraRun.h:
 C:/cubespace/250630_Mini_Project/Core/driver/Ultra/Ultra.h:
 C:/cubespace/250630_Mini_Project/Core/ap/inc/Model_mode.h:

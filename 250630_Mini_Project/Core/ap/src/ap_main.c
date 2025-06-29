@@ -3,8 +3,6 @@
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance == TIM2) {
-		//FND_DispDataCallBack();
-
 		TimeWatch_IncTimeCallBack();
 		StopWatch_IncTimeCallBack();
 		Ultra_RunCallBack();
@@ -28,7 +26,6 @@ int ap_main()
 		Listener_Excute();
 		Controller_Excute();
 		Presenter_UL_Excute();
-//		Presenter_Excute();
 	}
 
 	return 0;
@@ -38,6 +35,4 @@ void ap_init()
 {
 	Listener_Init();
 	Presenter_Init();
-	//MotorRun_Init();
-	//MotorRUN_PowerOn();
 }

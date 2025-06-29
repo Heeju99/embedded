@@ -11,6 +11,13 @@
 #include "Controller.h"
 #include "Button.h"
 #include "queue.h"
+#include "Presenter.h"
+#include "Sound.h"
+
+#define PASS_LEN 4
+
+extern char uartBuffer[PASS_LEN + 1];
+extern int  bufPos;
 
 void Listener_Init();
 void Listener_Excute();

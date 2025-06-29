@@ -9,6 +9,7 @@
 #include "Sound.h"
 #include "MotorRun.h"
 #include "UltraRun.h"
+#include "login.h"
 
 int ap_main();
 void ap_init();

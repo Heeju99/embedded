@@ -10,6 +10,7 @@
 #include "stm32f4xx_hal.h"
 
 #define QUE_SIZE	4
+//4
 
 typedef struct {
 	int front;

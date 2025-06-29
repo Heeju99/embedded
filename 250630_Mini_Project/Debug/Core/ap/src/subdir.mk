@@ -13,6 +13,7 @@ C_SRCS += \
 ../Core/ap/src/Sound.c \
 ../Core/ap/src/UltraRun.c \
 ../Core/ap/src/ap_main.c \
+../Core/ap/src/login.c \
 ../Core/ap/src/queue.c \
 ../Core/ap/src/stopWatch.c \
 ../Core/ap/src/timeWatch.c 
@@ -26,6 +27,7 @@ OBJS += \
 ./Core/ap/src/Sound.o \
 ./Core/ap/src/UltraRun.o \
 ./Core/ap/src/ap_main.o \
+./Core/ap/src/login.o \
 ./Core/ap/src/queue.o \
 ./Core/ap/src/stopWatch.o \
 ./Core/ap/src/timeWatch.o 
@@ -39,6 +41,7 @@ C_DEPS += \
 ./Core/ap/src/Sound.d \
 ./Core/ap/src/UltraRun.d \
 ./Core/ap/src/ap_main.d \
+./Core/ap/src/login.d \
 ./Core/ap/src/queue.d \
 ./Core/ap/src/stopWatch.d \
 ./Core/ap/src/timeWatch.d 
@@ -51,7 +54,7 @@ Core/ap/src/%.o Core/ap/src/%.su Core/ap/src/%.cyclo: ../Core/ap/src/%.c Core/ap
 clean: clean-Core-2f-ap-2f-src
 
 clean-Core-2f-ap-2f-src:
-	-$(RM) ./Core/ap/src/Controller.cyclo ./Core/ap/src/Controller.d ./Core/ap/src/Controller.o ./Core/ap/src/Controller.su ./Core/ap/src/Listener.cyclo ./Core/ap/src/Listener.d ./Core/ap/src/Listener.o ./Core/ap/src/Listener.su ./Core/ap/src/MotorRun.cyclo ./Core/ap/src/MotorRun.d ./Core/ap/src/MotorRun.o ./Core/ap/src/MotorRun.su ./Core/ap/src/Presenter.cyclo ./Core/ap/src/Presenter.d ./Core/ap/src/Presenter.o ./Core/ap/src/Presenter.su ./Core/ap/src/Security.cyclo ./Core/ap/src/Security.d ./Core/ap/src/Security.o ./Core/ap/src/Security.su ./Core/ap/src/Sound.cyclo ./Core/ap/src/Sound.d ./Core/ap/src/Sound.o ./Core/ap/src/Sound.su ./Core/ap/src/UltraRun.cyclo ./Core/ap/src/UltraRun.d ./Core/ap/src/UltraRun.o ./Core/ap/src/UltraRun.su ./Core/ap/src/ap_main.cyclo ./Core/ap/src/ap_main.d ./Core/ap/src/ap_main.o ./Core/ap/src/ap_main.su ./Core/ap/src/queue.cyclo ./Core/ap/src/queue.d ./Core/ap/src/queue.o ./Core/ap/src/queue.su ./Core/ap/src/stopWatch.cyclo ./Core/ap/src/stopWatch.d ./Core/ap/src/stopWatch.o ./Core/ap/src/stopWatch.su ./Core/ap/src/timeWatch.cyclo ./Core/ap/src/timeWatch.d ./Core/ap/src/timeWatch.o ./Core/ap/src/timeWatch.su
+	-$(RM) ./Core/ap/src/Controller.cyclo ./Core/ap/src/Controller.d ./Core/ap/src/Controller.o ./Core/ap/src/Controller.su ./Core/ap/src/Listener.cyclo ./Core/ap/src/Listener.d ./Core/ap/src/Listener.o ./Core/ap/src/Listener.su ./Core/ap/src/MotorRun.cyclo ./Core/ap/src/MotorRun.d ./Core/ap/src/MotorRun.o ./Core/ap/src/MotorRun.su ./Core/ap/src/Presenter.cyclo ./Core/ap/src/Presenter.d ./Core/ap/src/Presenter.o ./Core/ap/src/Presenter.su ./Core/ap/src/Security.cyclo ./Core/ap/src/Security.d ./Core/ap/src/Security.o ./Core/ap/src/Security.su ./Core/ap/src/Sound.cyclo ./Core/ap/src/Sound.d ./Core/ap/src/Sound.o ./Core/ap/src/Sound.su ./Core/ap/src/UltraRun.cyclo ./Core/ap/src/UltraRun.d ./Core/ap/src/UltraRun.o ./Core/ap/src/UltraRun.su ./Core/ap/src/ap_main.cyclo ./Core/ap/src/ap_main.d ./Core/ap/src/ap_main.o ./Core/ap/src/ap_main.su ./Core/ap/src/login.cyclo ./Core/ap/src/login.d ./Core/ap/src/login.o ./Core/ap/src/login.su ./Core/ap/src/queue.cyclo ./Core/ap/src/queue.d ./Core/ap/src/queue.o ./Core/ap/src/queue.su ./Core/ap/src/stopWatch.cyclo ./Core/ap/src/stopWatch.d ./Core/ap/src/stopWatch.o ./Core/ap/src/stopWatch.su ./Core/ap/src/timeWatch.cyclo ./Core/ap/src/timeWatch.d ./Core/ap/src/timeWatch.o ./Core/ap/src/timeWatch.su
 
 .PHONY: clean-Core-2f-ap-2f-src
 

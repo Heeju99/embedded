@@ -15,6 +15,7 @@ stateControl_t stateData = {0};
 inputData_TypeDef controlData = {};
 static safeModeState_t modeState = S_LOG_IN;
 
+
 void Controller_Excute()
 {
 	Controller_Mode();
@@ -38,10 +39,9 @@ void Controller_Mode()
 			controlData.id = NO_CONTROL;
 			modeState = S_SECURITY;
 			stateData.state = P_LOG;
-
 			 Presenter_UL_StateData(stateData);
 		}
-		//Log_in_Excute();
+		Login_Execute();
 		break;
 
 	case S_SECURITY:
@@ -49,7 +49,6 @@ void Controller_Mode()
 			controlData.id = NO_CONTROL;
 			modeState = S_LOG_IN;
 			stateData.state = P_SEC;
-
 			Presenter_UL_StateData(stateData);
 		}
 		Security_Excute();

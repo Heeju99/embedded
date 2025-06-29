@@ -1,0 +1,9 @@
+../Core/ap/src/login.c:24:6:safe_IncTimeCallBack	2
+../Core/ap/src/login.c:31:6:SAFE_IncTime	2
+../Core/ap/src/login.c:40:6:Login_Execute	6
+../Core/ap/src/login.c:52:6:wait_input	2
+../Core/ap/src/login.c:61:6:input_ING	3
+../Core/ap/src/login.c:93:6:Login_Open	3
+../Core/ap/src/login.c:106:6:Login_Fail	3
+../Core/ap/src/login.c:118:6:Login_Clear	3
+../Core/ap/src/login.c:138:6:is_timeout	3

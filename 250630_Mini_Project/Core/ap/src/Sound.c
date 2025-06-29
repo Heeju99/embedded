@@ -21,10 +21,13 @@ void Sound_PowerOn()
 {
 	Buzzer_SetFreq(1047); //do
 	Buzzer_Start();
-
+	HAL_Delay(100);
 	Buzzer_SetFreq(1319); //mi
+	HAL_Delay(100);
 	Buzzer_SetFreq(1568); //sol
+	HAL_Delay(100);
 	Buzzer_SetFreq(2039); //do
+	HAL_Delay(100);
 	Buzzer_Stop();
 }
 

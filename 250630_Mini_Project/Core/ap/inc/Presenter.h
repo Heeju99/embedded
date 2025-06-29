@@ -16,6 +16,9 @@
 #include "Buzzer.h"
 #include "Sound.h"
 #include "Controller.h"
+#include "Listener.h"
+#include "Login.h"
+#include "MotorRun.h"
 
 
 void Presenter_OutData(watch_t watchData);
@@ -28,5 +31,10 @@ void Presenter_UL_Excute();
 void Presenter_Delay(uint32_t half);
 void Presenter_UL_StateData();
 
+/////
+void Presenter_LOG_Excute();
+void Presenter_ResetStateMessageFlags();
+
+/////
 #endif /* AP_PRESENTER_H_ */
 

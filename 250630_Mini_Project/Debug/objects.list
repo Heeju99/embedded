@@ -17,6 +17,7 @@
 "./Core/ap/src/Sound.o"
 "./Core/ap/src/UltraRun.o"
 "./Core/ap/src/ap_main.o"
+"./Core/ap/src/login.o"
 "./Core/ap/src/queue.o"
 "./Core/ap/src/stopWatch.o"
 "./Core/ap/src/timeWatch.o"
