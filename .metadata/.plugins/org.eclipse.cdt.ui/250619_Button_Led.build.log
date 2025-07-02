@@ -1,7 +1,7 @@
-16:49:36 **** Incremental Build of configuration Debug for project 250619_Button_Led ****
+16:35:47 **** Incremental Build of configuration Debug for project 250619_Button_Led ****
 make -j16 all 
 make: *** No rule to make target 'Src/driver/Systemclock/Systemclock.o', needed by '250619_Button_Led.elf'.  Stop.
 "make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-16:49:37 Build Failed. 1 errors, 0 warnings. (took 140ms)
+16:35:47 Build Failed. 1 errors, 0 warnings. (took 85ms)
 

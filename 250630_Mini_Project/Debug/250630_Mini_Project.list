@@ -3849,8 +3849,6 @@ void ap_init()
  80018fc:	f7ff fbda 	bl	80010b4 <Listener_Init>
 	Presenter_Init();
  8001900:	f7ff fcf8 	bl	80012f4 <Presenter_Init>
-	//MotorRun_Init();
-	//MotorRUN_PowerOn();
 }
  8001904:	bf00      	nop
  8001906:	bd80      	pop	{r7, pc}

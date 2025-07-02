@@ -1,0 +1,59 @@
+/*
+ * Controller.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#include "Controller.h"
+
+typedef enum {S_TIME_WATCH, S_STOP_WATCH}watchModeState_t;
+
+static watchModeState_t modeState = S_TIME_WATCH;
+inputData_TypeDef controlData = {0};
+
+static button_t btnWatch = {0};
+
+void Controller_Excute()
+{
+	Controller_Mode();
+}
+
+void Controller_SetInputData(inputData_TypeDef inputData)
+{
+	if (inputData.id == MODE) {
+		controlData.id = MODE;
+		controlData.data = MODE_ACT;
+	}
+	else if (inputData.id == RUN_STOP) {
+		controlData.id = RUN_STOP;
+		controlData.data = STOPWATCH_ACT;
+	}
+	else if (inputData.id == BTN_CLEAR_W) {
+		controlData.id = BTN_CLEAR;
+		controlData.data = STOPWATCH_ACT;
+	}
+}
+
+void Controller_Mode()
+{
+	if(isQueEmpty(&btnQue)){
+		return;
+	}
+	deQue(&btnQue, &btnWatch);
+
+	switch (modeState) {
+	case S_TIME_WATCH:
+		if (btnWatch.id == BTN_MODE) {
+			modeState = S_STOP_WATCH;
+		}
+		TimeWatch_Excute();
+		break;
+	case S_STOP_WATCH:
+		if (btnWatch.id == BTN_MODE) {
+			modeState = S_TIME_WATCH;
+		}
+		StopWatch_Excute();
+		break;
+	}
+}

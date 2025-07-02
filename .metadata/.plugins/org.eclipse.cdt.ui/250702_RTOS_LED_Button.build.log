@@ -1,0 +1,10 @@
+18:53:20 **** Incremental Build of configuration Debug for project 250702_RTOS_LED_Button ****
+make -j16 all 
+arm-none-eabi-size  250702_RTOS_LED_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30056	    256	  18592	  48904	   bf08	250702_RTOS_LED_Button.elf
+Finished building: default.size.stdout
+ 
+
+18:53:20 Build Finished. 0 errors, 0 warnings. (took 185ms)
+
