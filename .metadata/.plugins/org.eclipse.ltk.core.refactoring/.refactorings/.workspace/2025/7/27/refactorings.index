@@ -6,3 +6,7 @@
 1751416878197	Delete resource '250701_TimeWatch_StopWatch_RTOS/Core/driver/FND_prof'
 1751424958417	Delete 3 resources
 1751424962848	Delete resource '250702_RTOS_LED_Button/Core/driver/Motor'
+1751504421661	Delete resource '250703_RTOS_StopWatch/250702_RTOS_LED_Button Debug.launch'
+1751504425706	Delete resource '250703_RTOS_StopWatch/Debug'
+1751522688535	Delete resource '250703_RTOS_StopWatch/Core/Src/my_queue.c'
+1751522718659	Delete resource '250703_RTOS_StopWatch/Core/Inc/my_queue.h'

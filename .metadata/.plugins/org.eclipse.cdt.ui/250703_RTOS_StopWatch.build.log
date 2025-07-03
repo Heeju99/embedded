@@ -1,0 +1,10 @@
+16:54:21 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  250703_RTOS_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28984	    192	  18592	  47768	   ba98	250703_RTOS_StopWatch.elf
+Finished building: default.size.stdout
+ 
+
+16:54:21 Build Finished. 0 errors, 0 warnings. (took 235ms)
+

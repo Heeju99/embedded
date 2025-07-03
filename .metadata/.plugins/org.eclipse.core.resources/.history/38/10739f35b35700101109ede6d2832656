@@ -1,0 +1,29 @@
+#include "Model.h"
+
+
+ typedef enum {
+	 S_STOPWATCH_STOP, S_STOPWATCH_RUN, S_STOPWATCH_CLEAR
+ }estopWatchState_t;
+
+
+ typedef struct{
+ 	uint16_t msec;
+ 	uint8_t sec;
+ 	uint8_t min;
+ 	uint8_t hour;
+ }stopWatch_time;
+
+
+ static estopWatchState_t stopWatchState = S_STOPWATCH_STOP; //초기값
+
+
+ void Model_Set_StopWatchState(estopWatchState_t state)
+ {
+	 stopWatchState = state;
+ }
+
+ estopWatchState_t Model_Get_StopWatchState() //get 함수를 통해 state
+ {
+	 return stopWatchState;
+ }
+

@@ -1,4 +1,4 @@
-16:35:46 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
+14:54:11 **** Incremental Build of configuration Debug for project 250618_GPIO_BareMetal ****
 make -j16 all 
 arm-none-eabi-size  250618_GPIO_BareMetal.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250618_GPIO_BareMetal.elf
 Finished building: default.size.stdout
  
 
-16:35:46 Build Finished. 0 errors, 0 warnings. (took 137ms)
+14:54:12 Build Finished. 0 errors, 0 warnings. (took 138ms)
 

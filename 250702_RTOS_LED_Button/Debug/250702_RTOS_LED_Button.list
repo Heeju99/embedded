@@ -874,8 +874,8 @@ void StartButtonTask(void const *argument) {
  80008c0:	681b      	ldr	r3, [r3, #0]
  80008c2:	4618      	mov	r0, r3
  80008c4:	f003 f9b2 	bl	8003c2c <osMutexRelease>
-		osDelay(10);
- 80008c8:	200a      	movs	r0, #10
+		osDelay(100);
+ 80008c8:	2064      	movs	r0, #100	@ 0x64
  80008ca:	f003 f934 	bl	8003b36 <osDelay>
 		if (Button_GetState(&hBtnLed1) == ACT_RELEASED) {
  80008ce:	e732      	b.n	8000736 <StartButtonTask+0x32>
@@ -1079,8 +1079,8 @@ void StartLedTask(void const *argument) {
  8000a60:	681b      	ldr	r3, [r3, #0]
  8000a62:	4618      	mov	r0, r3
  8000a64:	f003 f8e2 	bl	8003c2c <osMutexRelease>
-		osDelay(10);
- 8000a68:	200a      	movs	r0, #10
+		osDelay(100);
+ 8000a68:	2064      	movs	r0, #100	@ 0x64
  8000a6a:	f003 f864 	bl	8003b36 <osDelay>
 		curTime = HAL_GetTick();
  8000a6e:	e754      	b.n	800091a <StartLedTask+0x1a>
@@ -1191,8 +1191,8 @@ void StartFNDTask(void const *argument) {
  8000b14:	b29b      	uxth	r3, r3
  8000b16:	4618      	mov	r0, r3
  8000b18:	f000 fbb6 	bl	8001288 <FND_WriteData>
-		osDelay(10);
- 8000b1c:	200a      	movs	r0, #10
+		osDelay(100);
+ 8000b1c:	2064      	movs	r0, #100	@ 0x64
  8000b1e:	f003 f80a 	bl	8003b36 <osDelay>
 		evt = osMailGet(fndMail, 0);
  8000b22:	e7b9      	b.n	8000a98 <StartFNDTask+0x10>

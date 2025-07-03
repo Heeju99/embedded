@@ -1,4 +1,4 @@
-16:35:49 **** Incremental Build of configuration Debug for project 250626_TimeWatch_StopWatch_Buzzer ****
+14:54:13 **** Incremental Build of configuration Debug for project 250626_TimeWatch_StopWatch_Buzzer ****
 make -j16 all 
 arm-none-eabi-size  250626_TimeWatch_StopWatch_Buzzer.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  250626_TimeWatch_StopWatch_Buzzer.elf
 Finished building: default.size.stdout
  
 
-16:35:49 Build Finished. 0 errors, 0 warnings. (took 243ms)
+14:54:14 Build Finished. 0 errors, 0 warnings. (took 184ms)
 

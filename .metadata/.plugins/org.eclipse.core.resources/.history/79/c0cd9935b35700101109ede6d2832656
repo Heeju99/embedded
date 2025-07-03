@@ -1,0 +1,13 @@
+#ifndef AP_MODEL_MODEL_H_
+#define AP_MODEL_MODEL_H_
+
+ typedef enum {  //Listener, Controller, Presenter에 전달하기 위해
+	 S_STOPWATCH_STOP, S_STOPWATCH_RUN, S_STOPWATCH_CLEAR
+ }estopWatchState_t;
+
+
+ void Model_Set_StopWatchState(estopWatchState_t state);
+ estopWatchState_t Model_Get_StopWatchState();
+
+
+#endif /* AP_MODEL_MODEL_H_ */

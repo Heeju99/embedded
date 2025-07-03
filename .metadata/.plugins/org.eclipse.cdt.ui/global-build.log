@@ -1,21 +1,66 @@
-18:53:17 **** Incremental Build of configuration Debug for project 250702_RTOS_LED_Button ****
+16:54:19 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/cubespace/250702_RTOS_LED_Button/Core/driver/Button" -I"C:/cubespace/250702_RTOS_LED_Button/Core/driver/LedBar" -I"C:/cubespace/250702_RTOS_LED_Button/Core/driver/LCD" -I"C:/cubespace/250702_RTOS_LED_Button/Core/driver/FND" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "250702_RTOS_LED_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250702_RTOS_LED_Button\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250702_RTOS_LED_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 250702_RTOS_LED_Button.elf
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_StopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/cubespace/250703_RTOS_StopWatch/Core/driver/Button" -I"C:/cubespace/250703_RTOS_StopWatch/Core/driver/LedBar" -I"C:/cubespace/250703_RTOS_StopWatch/Core/driver/LCD" -I"C:/cubespace/250703_RTOS_StopWatch/Core/driver/FND" -I"C:/cubespace/250703_RTOS_StopWatch/Core/ap/Controller" -I"C:/cubespace/250703_RTOS_StopWatch/Core/ap/Listener" -I"C:/cubespace/250703_RTOS_StopWatch/Core/ap/Model" -I"C:/cubespace/250703_RTOS_StopWatch/Core/ap/Presenter" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_StopWatch.d" -MT"Core/ap/Presenter/Presenter_StopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_StopWatch.o"
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_Excute':
+../Core/ap/Presenter/Presenter_StopWatch.c:17:17: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+   17 |                 memcpy(&stopWatchData, pStopWatchData, sizeof(stopWatch_t));
+      |                 ^~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:2:1: note: include '<string.h>' or provide a declaration of 'memcpy'
+    1 | #include "Presenter_StopWatch.h"
+  +++ |+#include <string.h>
+    2 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:17:17: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+   17 |                 memcpy(&stopWatchData, pStopWatchData, sizeof(stopWatch_t));
+      |                 ^~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:17:17: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/ap/Presenter/Presenter_StopWatch.c: In function 'Presenter_StopWatch_LCD':
+../Core/ap/Presenter/Presenter_StopWatch.c:57:26: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   57 |                          sprintf(str, "STOP");
+      |                          ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:2:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    1 | #include "Presenter_StopWatch.h"
+  +++ |+#include <stdio.h>
+    2 | 
+../Core/ap/Presenter/Presenter_StopWatch.c:57:26: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   57 |                          sprintf(str, "STOP");
+      |                          ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:57:26: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/ap/Presenter/Presenter_StopWatch.c:59:26: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   59 |                          sprintf(str, "RUN");
+      |                          ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:59:26: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/ap/Presenter/Presenter_StopWatch.c:61:26: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   61 |                          sprintf(str, "CLEAR");
+      |                          ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:61:26: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/ap/Presenter/Presenter_StopWatch.c:67:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   67 |                 sprintf(str, "stp:%02d:%02d:%02d", stopWatchData.min, stopWatchData.sec, stopWatchData.msec/10);
+      |                 ^~~~~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:67:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/ap/Presenter/Presenter_StopWatch.c:50:14: warning: unused variable 'str3' [-Wunused-variable]
+   50 |         char str3[30];
+      |              ^~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:49:14: warning: unused variable 'str2' [-Wunused-variable]
+   49 |         char str2[30];
+      |              ^~~~
+../Core/ap/Presenter/Presenter_StopWatch.c:48:14: warning: unused variable 'str1' [-Wunused-variable]
+   48 |         char str1[30];
+      |              ^~~~
+arm-none-eabi-gcc -o "250703_RTOS_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\cubespace\250703_RTOS_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250703_RTOS_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250703_RTOS_StopWatch.elf
  
-arm-none-eabi-size  250702_RTOS_LED_Button.elf 
-arm-none-eabi-objdump -h -S 250702_RTOS_LED_Button.elf  > "250702_RTOS_LED_Button.list"
+arm-none-eabi-size  250703_RTOS_StopWatch.elf 
+arm-none-eabi-objdump -h -S 250703_RTOS_StopWatch.elf  > "250703_RTOS_StopWatch.list"
    text	   data	    bss	    dec	    hex	filename
-  30056	    256	  18592	  48904	   bf08	250702_RTOS_LED_Button.elf
+  28984	    192	  18592	  47768	   ba98	250703_RTOS_StopWatch.elf
 Finished building: default.size.stdout
  
-Finished building: 250702_RTOS_LED_Button.list
+Finished building: 250703_RTOS_StopWatch.list
  
-18:53:20 **** Incremental Build of configuration Debug for project 250702_RTOS_LED_Button ****
+16:54:21 **** Incremental Build of configuration Debug for project 250703_RTOS_StopWatch ****
 make -j16 all 
-arm-none-eabi-size  250702_RTOS_LED_Button.elf 
+arm-none-eabi-size  250703_RTOS_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-  30056	    256	  18592	  48904	   bf08	250702_RTOS_LED_Button.elf
+  28984	    192	  18592	  47768	   ba98	250703_RTOS_StopWatch.elf
 Finished building: default.size.stdout
  

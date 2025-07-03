@@ -1,0 +1,5 @@
+#include "Model.h"
+
+ typedef enum {
+	 S_STOPWATCH_STOP, S_STOPWATCH_RUN, S_STOPWATCH_CLEAR
+ }stopWatchState_e;

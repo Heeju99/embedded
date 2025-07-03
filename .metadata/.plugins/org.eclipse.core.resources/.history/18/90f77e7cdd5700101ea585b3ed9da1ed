@@ -1,0 +1,46 @@
+#include "Presenter_StopWatch.h"
+
+void Presenter_StopWatch_Init()
+{
+	LCD_Init(&hi2c1);
+}
+
+void Presenter_StopWatch_Excute()
+{
+	stopWatch_t *pStopWatchData;
+	osEvent evt = osMailGet(stopWatchDataMailBox, 0);
+	if(evt.status == osEventMail){
+		pStopWatchData = evt.value.p;
+
+		Presenter_StopWatch_FND(pStopWatchData);
+		Presenter_StopWatch_LCD(pStopWatchData);
+
+		osMailFree(stopWatchDataMailBox, pStopWatchData); //Free mem
+	}
+}
+
+void Presenter_StopWatch_FND(stopWatch_t *pStopWatchData)
+{
+	FND_WriteData(pStopWatchData->min%10*1000 + pStopWatchData->sec%100 *10 + pStopWatchData->msec/100);
+
+	if(pStopWatchData->msec%100 <50){
+		FND_WriteDp(FND_DP_10, FND_DP_ON);
+	}
+	else{
+		FND_WriteDp(FND_DP_10,FND_DP_OFF);
+	}
+
+	if(pStopWatchData->msec <500){
+		FND_WriteDp(FND_DP_1000, FND_DP_ON);
+	}
+	else{
+		FND_WriteDp(FND_DP_1000,FND_DP_OFF);
+	}
+}
+
+void Presenter_StopWatch_LCD(stopWatch_t *pStopWatchData)
+{
+	char str[50];
+	sprintf(str, "stp:%02d:%02d:%02d", pStopWatchData->min, pStopWatchData->sec, pStopWatchData->msec/10);
+	LCD_writeStringXY(0, 0, str);
+}

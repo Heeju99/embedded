@@ -1,0 +1,24 @@
+#include "Presenter_StopWatch.h"
+
+void Presenter_StopWatch_Init()
+{
+	//FND INIT
+
+}
+
+void Presenter_StopWatch_Excute()
+{
+	stopWatch_t *pStopWatchData;
+	osEvent evt = osMailGet(stopWatchDataMailBox, 0);
+	if(evt.status == osEventMail){
+		pStopWatchData = evt.value.p;
+	}
+	Presenter_StopWatch_FND();
+
+}
+
+void Presenter_StopWatch_FND()
+{
+
+	FND_DispDataCallBack();
+}

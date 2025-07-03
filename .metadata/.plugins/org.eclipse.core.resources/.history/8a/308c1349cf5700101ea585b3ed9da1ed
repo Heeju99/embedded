@@ -1,0 +1,22 @@
+#include "Presenter_StopWatch.h"
+
+stopWatch_t fndData;
+
+void Presenter_StopWatch_Init()
+{
+	//FND INIT
+
+}
+
+void Presenter_StopWatch_Excute()
+{
+	//FND EXCUTE
+	Presenter_StopWatch_FND();
+
+}
+
+void Presenter_StopWatch_FND()
+{
+
+	FND_DispDataCallBack(&fndData);
+}
