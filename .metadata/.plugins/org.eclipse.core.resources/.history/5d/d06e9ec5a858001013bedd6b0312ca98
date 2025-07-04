@@ -1,0 +1,11 @@
+#include "Distance.h"
+
+void Distance_Init()
+{
+
+}
+
+void Distance_Excute()
+{
+	Ultra_Trigger_Input();
+}

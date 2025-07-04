@@ -1,3 +1,0 @@
-../Core/ap/Controller/Controller.c:5:6:Controller_Init	1
-../Core/ap/Controller/Controller.c:12:6:Controller_Excute	3
-../Core/ap/Controller/Controller.c:28:6:Controller_CheckEventMode	5

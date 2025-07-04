@@ -51,17 +51,26 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_StopWatch.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_StopWatch.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_TimeWatch.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_Distance.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Distance.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_TempHumid.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Mode.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/Controller.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/TimeWatch.h \
- C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/StopWatch.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/Distance.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/Ultra/Ultra.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_mode.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/TempHumid.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_StopWatch.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/FND/FND.h \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/LCD/lcd.h \
  ../Core/Inc/i2c.h \
- C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_TimeWatch.h
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_TimeWatch.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_Distance.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_TempHumid.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -116,14 +125,23 @@ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/Button/Button.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_StopWatch.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_StopWatch.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_TimeWatch.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_Distance.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Distance.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_TempHumid.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Mode.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/Controller.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/TimeWatch.h:
-C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/StopWatch.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/Distance.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/Ultra/Ultra.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_mode.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Controller/TempHumid.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_StopWatch.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/FND/FND.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/LCD/lcd.h:
 ../Core/Inc/i2c.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_TimeWatch.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_Distance.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Presenter/Presenter_TempHumid.h:

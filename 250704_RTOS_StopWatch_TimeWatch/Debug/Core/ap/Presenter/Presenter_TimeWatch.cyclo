@@ -1,4 +1,4 @@
-../Core/ap/Presenter/Presenter_TimeWatch.c:9:6:Presenter_TimeWatch_Init	1
-../Core/ap/Presenter/Presenter_TimeWatch.c:14:6:Presenter_TimeWatch_Excute	2
-../Core/ap/Presenter/Presenter_TimeWatch.c:29:6:Presenter_TimeWatch_FND	2
-../Core/ap/Presenter/Presenter_TimeWatch.c:40:6:Presenter_TimeWatch_LCD	2
+../Core/ap/Presenter/Presenter_TimeWatch.c:3:6:Presenter_TimeWatch_Init	1
+../Core/ap/Presenter/Presenter_TimeWatch.c:8:6:Presenter_TimeWatch_Excute	2
+../Core/ap/Presenter/Presenter_TimeWatch.c:24:6:Presenter_TimeWatch_FND	2
+../Core/ap/Presenter/Presenter_TimeWatch.c:35:6:Presenter_TimeWatch_LCD	6

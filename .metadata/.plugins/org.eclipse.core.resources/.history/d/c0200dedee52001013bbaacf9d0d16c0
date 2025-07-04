@@ -1,9 +1,0 @@
-#ifndef AP_INC_ULTRARUN_H_
-#define AP_INC_ULTRARUN_H_
-
-#include "stm32f4xx_hal.h"
-#include "UltraRun.h"
-
-void UltraRun_PowerOn();
-
-#endif /* AP_INC_ULTRARUN_H_ */

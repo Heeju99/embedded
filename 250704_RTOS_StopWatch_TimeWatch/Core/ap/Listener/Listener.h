@@ -6,6 +6,9 @@
 #include "Button.h"
 #include "Listener_StopWatch.h"
 #include "Listener_TimeWatch.h"
+#include "Listener_Distance.h"
+#include "Listener_TempHumid.h"
+
 #include "Model_Mode.h"
 
 void Listener_Init();

@@ -1,0 +1,7 @@
+#ifndef AP_CONTROLLER_DISTANCE_H_
+#define AP_CONTROLLER_DISTANCE_H_
+
+void Distance_Init();
+void Controller_Excute();
+
+#endif /* AP_CONTROLLER_DISTANCE_H_ */

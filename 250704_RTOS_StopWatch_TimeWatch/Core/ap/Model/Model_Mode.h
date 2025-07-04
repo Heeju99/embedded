@@ -10,7 +10,7 @@
 #include <stdint.h>
 #include "cmsis_os.h"
 
-typedef enum {S_TIMEWATCH_MODE, S_STOPWATCH_MODE} eModeState_t;
+typedef enum {S_TIMEWATCH_MODE, S_STOPWATCH_MODE, S_DISTANCE_MODE, S_TEMP_HUMID_MODE} eModeState_t;
 typedef enum {EVENT_MODE} eModeEvent_t;
 
 extern osMessageQId modeEventMsgBox;

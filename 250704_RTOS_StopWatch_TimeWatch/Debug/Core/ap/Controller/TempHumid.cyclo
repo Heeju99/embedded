@@ -1,0 +1,2 @@
+../Core/ap/Controller/TempHumid.c:3:6:TempHumid_Init	1
+../Core/ap/Controller/TempHumid.c:8:6:TempHumid_Excute	1

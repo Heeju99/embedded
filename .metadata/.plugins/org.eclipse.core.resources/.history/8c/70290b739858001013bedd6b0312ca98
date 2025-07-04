@@ -1,3 +1,0 @@
-../Core/ap/Listener/Listener_StopWatch.c:9:6:Listener_StopWatchInit	8	static
-../Core/ap/Listener/Listener_StopWatch.c:16:6:Listener_StopWatchExcute	8	static
-../Core/ap/Listener/Listener_StopWatch.c:22:6:Listener_StopWatch_CheckButton	8	static

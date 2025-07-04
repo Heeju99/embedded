@@ -1,0 +1,10 @@
+#ifndef AP_MODEL_MODEL_DISTANCE_H_
+#define AP_MODEL_MODEL_DISTANCE_H_
+
+ typedef struct{
+ 	uint16_t dst;
+ }distance_t;
+
+ extern osMailQId DistanceDataMailBox;  //시간 정보
+ extern osMailQDef(DistanceDataQueue, 4, distance_t);
+#endif /* AP_MODEL_MODEL_DISTANCE_H_ */

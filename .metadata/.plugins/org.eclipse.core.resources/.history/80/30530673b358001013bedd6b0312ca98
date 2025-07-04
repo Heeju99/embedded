@@ -1,0 +1,9 @@
+#ifndef AP_PRESENTER_PRESENTER_DISTANCE_H_
+#define AP_PRESENTER_PRESENTER_DISTANCE_H_
+
+
+void Presenter_Distance_Init();
+void Presenter_Distance_Excute();
+
+
+#endif /* AP_PRESENTER_PRESENTER_DISTANCE_H_ */

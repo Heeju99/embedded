@@ -4,6 +4,9 @@
 #include <string.h>
 #include "TimeWatch.h"
 #include "StopWatch.h"
+#include "Distance.h"
+#include "TempHumid.h"
+
 #include "Model_Mode.h"
 
 void Controller_Init();

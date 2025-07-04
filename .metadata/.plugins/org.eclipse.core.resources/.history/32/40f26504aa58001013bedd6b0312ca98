@@ -1,0 +1,22 @@
+#include "Model_Distance.h"
+
+
+
+osMailQId DistanceDataMailBox;  //시간 정보
+osMailQDef(DistanceDataQueue, 4, distance_t);
+
+
+void Model_Distance_Init()
+{
+	DistanceDataMailBox = osMailCreate(osMailQ(DistanceDataQueue), NULL);
+}
+
+void Model_Set_TimeWatchState(eTimeWatchState_t state)
+{
+	timeWatchState = state;
+}
+
+eTimeWatchState_t Model_Get_TimeWatchState() //get 함수를 통해 state
+{
+	 return timeWatchState;
+}

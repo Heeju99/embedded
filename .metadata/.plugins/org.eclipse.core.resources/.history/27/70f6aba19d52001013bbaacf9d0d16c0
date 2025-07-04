@@ -1,8 +1,0 @@
-#ifndef DRIVER_ULTRA_ULTRA_H_
-#define DRIVER_ULTRA_ULTRA_H_
-
-#include "stm32f4xx_hal.h"
-#include "tim.h"
-
-
-#endif /* DRIVER_ULTRA_ULTRA_H_ */

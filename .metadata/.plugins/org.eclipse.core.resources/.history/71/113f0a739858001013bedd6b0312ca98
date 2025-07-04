@@ -1,3 +1,0 @@
-../Core/ap/Controller/TimeWatch.c:11:6:TimeWatch_Init	16	static
-../Core/ap/Controller/TimeWatch.c:23:6:TimeWatch_Excute	16	static
-../Core/ap/Controller/TimeWatch.c:36:6:TimeWatch_IncTimeCallBack	4	static

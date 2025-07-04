@@ -1,3 +1,7 @@
-../Core/ap/Controller/TimeWatch.c:11:6:TimeWatch_Init	1
-../Core/ap/Controller/TimeWatch.c:23:6:TimeWatch_Excute	2
-../Core/ap/Controller/TimeWatch.c:36:6:TimeWatch_IncTimeCallBack	5
+../Core/ap/Controller/TimeWatch.c:10:6:TimeWatch_Init	1
+../Core/ap/Controller/TimeWatch.c:22:6:TimeWatch_Excute	5
+../Core/ap/Controller/TimeWatch.c:48:6:TimeWatch_Normal	4
+../Core/ap/Controller/TimeWatch.c:74:6:TimeWatch_ModifyHour	5
+../Core/ap/Controller/TimeWatch.c:100:6:TimeWatch_ModifyMin	5
+../Core/ap/Controller/TimeWatch.c:125:6:TimeWatch_ModifySec	4
+../Core/ap/Controller/TimeWatch.c:150:6:TimeWatch_IncTimeCallBack	5

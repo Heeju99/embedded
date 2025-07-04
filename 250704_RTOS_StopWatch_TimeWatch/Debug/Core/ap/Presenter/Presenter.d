@@ -53,7 +53,10 @@ Core/ap/Presenter/Presenter.o: ../Core/ap/Presenter/Presenter.c \
  C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/LCD/lcd.h \
  ../Core/Inc/i2c.h ../Core/Inc/main.h \
  ../Core/ap/Presenter/Presenter_TimeWatch.h \
- C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h \
+ ../Core/ap/Presenter/Presenter_Distance.h \
+ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Distance.h \
+ ../Core/ap/Presenter/Presenter_TempHumid.h
 ../Core/ap/Presenter/Presenter.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Mode.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
@@ -110,3 +113,6 @@ C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/driver/LCD/lcd.h:
 ../Core/Inc/main.h:
 ../Core/ap/Presenter/Presenter_TimeWatch.h:
 C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_TimeWatch.h:
+../Core/ap/Presenter/Presenter_Distance.h:
+C:/cubespace/250704_RTOS_StopWatch_TimeWatch/Core/ap/Model/Model_Distance.h:
+../Core/ap/Presenter/Presenter_TempHumid.h:

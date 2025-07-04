@@ -32,6 +32,7 @@ Core/driver/Button \
 Core/driver/FND \
 Core/driver/LCD \
 Core/driver/LedBar \
+Core/driver/Ultra \
 Drivers/STM32F4xx_HAL_Driver/Src \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
 Middlewares/Third_Party/FreeRTOS/Source \

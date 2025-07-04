@@ -1,9 +1,3 @@
-/*
- * Presenter_TimeWatch.c
- *
- *  Created on: Jul 4, 2025
- *      Author: kccistc
- */
 #include "Presenter_TimeWatch.h"
 
 void Presenter_TimeWatch_Init()
@@ -21,6 +15,7 @@ void Presenter_TimeWatch_Excute()
 		ptimeWatchData = evt.value.p;
 		memcpy(&timeWatchData, ptimeWatchData, sizeof(timeWatch_t));
 		osMailFree(timeWatchDataMailBox, ptimeWatchData); //Free mem
+
 		Presenter_TimeWatch_FND(timeWatchData);
 		Presenter_TimeWatch_LCD(timeWatchData);
 	}
@@ -39,7 +34,27 @@ void Presenter_TimeWatch_FND(timeWatch_t timeWatchData)
 
 void Presenter_TimeWatch_LCD(timeWatch_t timeWatchData)
 {
+
 	char str[30];
+		static eTimeWatchState_t prevTimeWatchState = 10;
+		eTimeWatchState_t timeWatchState = Model_Get_TimeWatchState();
+		if(timeWatchState != prevTimeWatchState) {
+			prevTimeWatchState = timeWatchState;
+			if(timeWatchState == S_TIMEWATCH_MODIFY_HOUR) {
+				sprintf(str, "HOUR ");
+			}
+			else if(timeWatchState == S_TIMEWATCH_MODIFY_MIN) {
+				sprintf(str, "MIN  ");
+			}
+			else if(timeWatchState == S_TIMEWATCH_MODIFY_SEC) {
+				sprintf(str, "SEC");
+			}
+			LCD_writeStringXY(0, 11, str);
+		}
+
+
+
+
 	if (timeWatchData.msec < 500) {
 		sprintf(str, "%02d:%02d:%02d           ", timeWatchData.hour, timeWatchData.min, timeWatchData.sec);
 	}

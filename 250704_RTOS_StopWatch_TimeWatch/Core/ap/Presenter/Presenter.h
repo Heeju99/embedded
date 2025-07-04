@@ -4,6 +4,8 @@
 #include "Model_Mode.h"
 #include "Presenter_StopWatch.h"
 #include "Presenter_TimeWatch.h"
+#include "Presenter_Distance.h"
+#include "Presenter_TempHumid.h"
 
 void Presenter_Init();
 void Presenter_Excute();

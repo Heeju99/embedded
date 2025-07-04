@@ -18,3 +18,5 @@
 1751607220216	Delete resource '250704_RTOS_StopWatch_TimeWatch/250704_RTOS_StopWatch_TimeWatch Debug.launch'
 1751607223801	Delete resource '250704_RTOS_StopWatch_TimeWatch/Debug'
 1751607378363	Delete resource '250704_RTOS_StopWatch_TimeWatch'
+1751612816712	Delete resource '250704_RTOS_StopWatch_TimeWatch/Core/driver/Ultra'
+1751613569231	Delete resource '250704_RTOS_StopWatch_TimeWatch/Core/ap/Listener/Listener_TempHumid.h'

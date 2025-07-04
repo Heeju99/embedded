@@ -1,3 +1,0 @@
-../Core/ap/Model/Model_StopWatch.c:14:7:Model_StopWatch_Init	1
-../Core/ap/Model/Model_StopWatch.c:22:7:Model_Set_StopWatchState	1
-../Core/ap/Model/Model_StopWatch.c:27:20:Model_Get_StopWatchState	1
