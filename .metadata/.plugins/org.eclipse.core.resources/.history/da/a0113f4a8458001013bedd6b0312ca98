@@ -1,0 +1,16 @@
+#ifndef AP_MODEL_MODEL_MODE_H_
+#define AP_MODEL_MODEL_MODE_H_
+
+#include <stdint.h>
+#include "cmsis_os.h"
+
+typedef enum {S_TIMEWATCH_MODE, S_STOPWATCH_MODE}eModeState_t;
+typedef enum {EVENT_MODE}eModeEvent_t;
+
+extern osMessageQUd modeEventMsgBox;
+
+void Model_ModeInit();
+void Model_Set_ModeState(eModeState_t state);
+estopWatchState_t Model_Get_ModeState();
+
+#endif /* AP_MODEL_MODEL_MODE_H_ */

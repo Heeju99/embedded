@@ -1,0 +1,60 @@
+#include "Presenter_TimeWatch.h"
+
+void Presenter_TimeWatch_Init()
+{
+
+}
+
+void Presenter_TimeWatch_Excute()
+{
+	timeWatch_t timeWatchData;
+	timeWatch_t *pTimeWatchData;
+
+	osEvent evt = osMailGet(timeWatchDataMailBox, osWaitForever);
+	if(evt.status == osEventMail){
+		pTimeWatchData = evt.value.p;
+		memcpy(&timeWatchData, pTimeWatchData, sizeof(timeWatch_t));
+		osMailFree(timeWatchDataMailBox, pTimeWatchData); //Free mem
+	}
+		Presenter_TimeWatch_FND(timeWatchData);
+		Presenter_TimeWatch_LCD(timeWatchData);
+}
+
+void Presenter_TimeWatch_FND(timeWatch_t timeWatchData)
+{
+	FND_WriteData(timeWatchData.hour%100 + timeWatchData.min);
+
+	if(timeWatchData.msec%100 <50){
+		FND_WriteDp(FND_DP_100, FND_DP_ON);
+	}
+	else{
+		FND_WriteDp(FND_DP_100,FND_DP_OFF);
+	}
+}
+
+void Presenter_StopWatch_LCD(timeWatch_t timeWatchData)
+{
+	char str[30];
+	char str1[30];
+	char str2[30];
+	char str3[30];
+
+	 static estopWatchState_t prevlcdState;
+	 estopWatchState_t lcdState = Model_Get_TimeWatchState(); //get 함수를 통해 state
+	 if(lcdState != prevlcdState){
+		 prevlcdState = lcdState;
+		 if(lcdState == S_STOPWATCH_STOP){
+			 sprintf(str, "STOP");
+		 } else if (lcdState == S_STOPWATCH_RUN){
+			 sprintf(str, "RUN");
+		 } else if (lcdState == S_STOPWATCH_CLEAR){
+			 sprintf(str, "CLEAR");
+		 }
+		 LCD_writeStringXY(0, 0, "                ");  // 공백으로 덮어쓰기
+		 LCD_writeStringXY(0, 0, str);
+	 }
+	 if(timeWatchData.msec <500){
+		sprintf(str, "stp:%02d:%02d:%02d", timeWatchData.min, timeWatchData.sec, timeWatchData.msec/10);
+		LCD_writeStringXY(1, 0, str);
+	 }
+}

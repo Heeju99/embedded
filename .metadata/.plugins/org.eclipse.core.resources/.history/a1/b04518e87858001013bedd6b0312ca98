@@ -1,0 +1,11 @@
+#include "TimeWatch.h"
+
+void TimeWatch_Init()
+{
+
+}
+
+void TimeWatch_Excute()
+{
+
+}

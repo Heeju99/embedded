@@ -1,0 +1,8 @@
+#ifndef AP_PRESENTER_PRESENTER_TIMEWATCH_H_
+#define AP_PRESENTER_PRESENTER_TIMEWATCH_H_
+
+
+void Presenter_TimeWatch_Init()
+void Presenter_TimeWatch_Excute();
+
+#endif /* AP_PRESENTER_PRESENTER_TIMEWATCH_H_ */

@@ -1,0 +1,59 @@
+#include "TimeWatch.h"
+
+void TimeWatch_Init()
+{
+	timeWatchData.hour = 0;
+	timeWatchData.min = 0;
+	timeWatchData.sec = 0;
+	timeWatchData.msec = 0;
+
+	timeWatch_t *pTimeWatchData = osMailAlloc(timeWatchDataMailBox,0);
+	memcpy(pTimeWatchData , &timeWatchData, sizeof(timeWatch_t));
+	osMailPut(timeWatchDataMailBox, pTimeWatchData);
+
+}
+
+void TimeWatch_Excute()
+{
+	//1초 간격으로 값을 Updat3 (sec의 비교를 통해 Update)
+	static uint16_t prevMilSec = 0;
+	if(prevMilSec == timeWatchData.msec){
+		return;
+	}
+	prevMilSec = timeWatchData.msec;
+
+	//QUEUE에 집어 넣겠다
+	timeWatch_t *pTimeWatchData = osMailAlloc(timeWatchDataMailBox,0);
+	memcpy(pTimeWatchData , &timeWatchData, sizeof(timeWatch_t));
+	osMailPut(timeWatchDataMailBox, pTimeWatchData);
+}
+
+
+void TimeWatch_IncTimeCallBack() //1ms마다 Callback
+{
+
+	if(timeWatchData.msec != 1000-1){
+		timeWatchData.msec++;
+		return;
+	}
+	timeWatchData.msec = 0;
+
+	if(timeWatchData.sec != 60-1){
+		timeWatchData.sec++;
+		return;
+	}
+	timeWatchData.sec = 0;
+
+	if(timeWatchData.min != 60-1){
+		timeWatchData.min++;
+		return;
+	}
+	timeWatchData.min = 0;
+
+
+	if(timeWatchData.hour != 24-1){
+		timeWatchData.hour++;
+		return;
+	}
+	timeWatchData.hour = 0;
+}

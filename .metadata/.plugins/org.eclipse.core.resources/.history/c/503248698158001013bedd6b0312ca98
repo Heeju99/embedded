@@ -1,0 +1,12 @@
+#include "Presenter_TimeWatch.h"
+
+void Presenter_TimeWatch_Init()
+{
+
+}
+
+void Presenter_TimeWatch_Excute()
+{
+
+}
+

@@ -1,6 +1,5 @@
 #include "Presenter_StopWatch.h"
 
-
 void Presenter_StopWatch_Init()
 {
 	LCD_Init(&hi2c1);
@@ -20,7 +19,6 @@ void Presenter_StopWatch_Excute()
 		Presenter_StopWatch_FND(stopWatchData);
 		Presenter_StopWatch_LCD(stopWatchData);
 }
-
 
 
 void Presenter_StopWatch_FND(stopWatch_t stopWatchData)
@@ -68,3 +66,4 @@ void Presenter_StopWatch_LCD(stopWatch_t stopWatchData)
 		LCD_writeStringXY(1, 0, str);
 	 }
 }
+

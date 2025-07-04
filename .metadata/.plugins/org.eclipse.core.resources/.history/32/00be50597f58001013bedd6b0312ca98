@@ -1,0 +1,21 @@
+#include "Listener.h"
+
+void Listener_Init()
+{
+	Listener_TimeWatchInit();
+	Listener_StopWatchInit();
+}
+
+
+void Listener_Excute()
+{
+	switch(state)
+	{
+	case S_TIMEWATCH_MODE:
+		Listener_TimeWatchExcute();
+		break;
+	case S_STOPWATCH_MODE:
+		Listener_StopWatchExcute();
+		break;
+	}
+}

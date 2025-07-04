@@ -1,0 +1,46 @@
+#include "TimeWatch.h"
+
+timeWatch_t timeWatchData;
+
+void TimeWatch_Init()
+{
+	timeWatchData.hour = 0;
+	timeWatchData.min = 0;
+	timeWatchData.sec = 0;
+	timeWatchData.msec = 0;
+}
+
+void TimeWatch_Excute()
+{
+
+}
+
+
+void TimeWatch_IncTimeCallBack() //1ms마다 Callback
+{
+
+	if(stopWatchData.msec != 1000-1){
+		stopWatchData.msec++;
+		return;
+	}
+	stopWatchData.msec = 0;
+
+	if(stopWatchData.sec != 60-1){
+		stopWatchData.sec++;
+		return;
+	}
+	stopWatchData.sec = 0;
+
+	if(stopWatchData.min != 60-1){
+		stopWatchData.min++;
+		return;
+	}
+	stopWatchData.min = 0;
+
+
+	if(stopWatchData.hour != 24-1){
+		stopWatchData.hour++;
+		return;
+	}
+	stopWatchData.hour = 0;
+}

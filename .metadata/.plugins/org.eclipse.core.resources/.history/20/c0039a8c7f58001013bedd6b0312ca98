@@ -1,0 +1,31 @@
+#include "Listener.h"
+
+void Listener_Init()
+{
+	Listener_TimeWatchInit();
+	Listener_StopWatchInit();
+}
+
+
+void Listener_Excute()
+{
+	eModeState_t state = Model_GetModeState();
+
+	switch(state)
+	{
+	case S_TIMEWATCH_MODE:
+		Listener_TimeWatchExcute();
+		break;
+	case S_STOPWATCH_MODE:
+		Listener_StopWatchExcute();
+		break;
+	}
+	Listener_CheckButton();
+}
+
+void Listener_CheckButton()
+{
+	if(Button_GetState(&hbtnMode) == ACT_RELEASED){
+		osMessagePut(modeEventMsgBox, EVENT_RUN_STOP, 0);  //QUEUE에 투입
+	}
+}

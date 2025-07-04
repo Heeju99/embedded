@@ -1,0 +1,8 @@
+#include "Model_Mode.h"
+
+typedef enum {S_TIMEWATCH_MODE, S_STOPWATCH_MODE}eModeState_t;
+
+ void Model_Mode_Init()
+ {
+
+ }

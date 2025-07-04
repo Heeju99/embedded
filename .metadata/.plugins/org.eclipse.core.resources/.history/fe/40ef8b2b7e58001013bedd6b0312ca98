@@ -1,0 +1,50 @@
+#include "Controller.h"
+
+
+void Controller_Init()
+{
+	TimeWatch_Init();
+	StopWatch_Init();
+}
+
+
+void Controller_Excute()
+{
+	eModeState_t state = Model_Get_ModeState();
+
+	switch(state)
+	{
+	case S_TIMEWATCH_MODE :
+		TimeWatch_Excute();
+		break;
+
+	case S_STOPWATCH_MODE :
+		StopWatch_Excute();
+		break;
+	}
+}
+
+void Controller_CheckEventMode()
+{
+	osEvent evt = osMessageGet(modeEventMsgBox, 0);
+	uint16_t evtState;
+
+	if(evt.status == osEventMessage){
+		evtState = evt.value.v;
+		if(evtState != EVNET_MODE){
+			return;
+		}
+
+		eModeState_t state = Model_Get_ModeState();
+
+		if(state == S_TIMEWATCH_MODE)
+		{
+			Model_Set_ModeState(S_STOPWATCH_MODE);
+		}
+		else if(state == S_STOPWATCH_MODE)
+		{
+			Model_Set_ModeState(S_TIMEWATCH_MODE);
+		}
+	}
+}
+

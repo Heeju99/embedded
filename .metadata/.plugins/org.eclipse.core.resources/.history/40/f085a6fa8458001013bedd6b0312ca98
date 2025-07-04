@@ -1,0 +1,13 @@
+#include "Model_TimeWatch.h"
+
+
+osMailQId timeWatchDataMailBox;  //시간 정보
+osMailQDef(timeWatchDataQueue, 4, timeWatch_t);
+
+
+ void Model_TimeWatch_Init()
+ {
+	 timeWatchDataMailBox = osMailCreate(osMailQ(timeWatchDataQueue), NULL);
+ }
+
+
